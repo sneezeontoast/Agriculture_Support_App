@@ -39,6 +39,7 @@ dependencies:
   chewie:
   video_player:
   url_launcher:
+  http:
 
 dev_dependencies:
   flutter_test:
