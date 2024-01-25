@@ -78,7 +78,9 @@ class _DemoApiListScreenState extends State<DemoApiListScreen> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Column(
+          child: ListView(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
             children: [
               ListTile(
                 leading: Text('Rain/\nMax '),
@@ -96,23 +98,29 @@ class _DemoApiListScreenState extends State<DemoApiListScreen> {
                   // ListTile is a default widget in flutter. You can create your own widget for this
                   return ListTile(
                     leading: Column(
-                      children: [
-                        double.parse(item['rain_sum']
-                                    .toString()
-                                    .replaceAll(" mm", "")) >
-                                0.0
-                            ? Icon(Icons.cloud)
-                            : Icon(Icons.cloud_upload_outlined),
-                        Text(item['temperature_2m_max'].toString()),
-                      ],
+                        children: [
+                          double.parse(item['rain_sum']
+                                      .toString()
+                                      .replaceAll(" mm", "")) >
+                                  0.0
+                              ? ChoiceCard(choice: choices[0])
+                              : ChoiceCard(choice: choices[1]),
+                          ],
+
                     ),
                     title: Text(item['date'].toString()),
                     subtitle: Text(item.toString()),
-                    trailing: Text(convertSecondsToHoursMinutes(int.parse(
-                            removeDecimalAndTwoDigits(item["daylight_duration"]
-                                .toString()
-                                .replaceAll(" s", "")))) +
-                        "hrs"),
+                    trailing: Column(
+                      children: [
+                        Text(convertSecondsToHoursMinutes(int.parse(
+                                removeDecimalAndTwoDigits(item["daylight_duration"]
+                                    .toString()
+                                    .replaceAll(" s", "")))) +
+                            "hrs"),
+                        Text(item['temperature_2m_max'].toString()),
+
+                      ],
+                    ),
                   );
                 },
               ),

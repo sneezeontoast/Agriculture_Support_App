@@ -15,6 +15,7 @@ export 'routes.dart';
 //----------------------------------------------------------------------
 
 export 'package:http/http.dart';
+export 'package:flutter_weather_icons/flutter_weather_icons.dart';
 
 //----------------------------------------------------------------------
 // Demo Screen Imports - export to allow inclusion in navigation
@@ -47,3 +48,4 @@ export 'demo_data/demo_static_data.dart'; // Static data sources
 //----------------------------------------------------------------------
 
 export 'demo_services/demo_data_api_service.dart'; // Get data from API
+export 'demo_services/weather_icons_service.dart'; // Get Weather Icons
