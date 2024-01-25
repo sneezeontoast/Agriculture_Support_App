@@ -7,6 +7,7 @@
 
 export 'package:flutter/material.dart';
 export 'dart:convert';
+export 'routes.dart';
 
 //----------------------------------------------------------------------
 // export external plugins
