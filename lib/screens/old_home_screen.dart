@@ -1,4 +1,8 @@
+import 'package:agriculture_support_app/data/home_data.dart';
+import 'package:agriculture_support_app/demo_imports.dart';
+
 import '../imports.dart';
+import '../demo_imports.dart';
 
 // MyHomePage is a StatefulWidget which can maintain state that can change over time
 class MyHomePage extends StatefulWidget {
@@ -39,11 +43,20 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       ),
       body: TabBarView( // TabBarView is a page view that displays the widget which corresponds to the currently selected tab
         controller: _tabController, // The TabController for the TabBarView
-        children: const [ // The list of widgets that are displayed when a tab is selected
+        children: [ // The list of widgets that are displayed when a tab is selected
           HomeScreen(), // Each child is a single tab view in the TabBarView
-          SimpleScreen(title: 'how to', text_1: 'This is how to do stuff', text_2: "We Hoped you enjouyed the video", video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
           // Center(child: Text("You are in How To")),
-          Center(child: Text("you are in More")),
+          // Center(child: Text("you are in More")),
+          // DemoListHorizontalWidget()
+          // ContextSlider(),
+          // CoolButton()
+          Expanded(child: DemoListVerticalWidget()),
+          // CompostIntro()
+          // Center(child: Text("you are in More"))
+          ListVerticalWidget(data_class: HomeStaticData())
+
+
+
         ],
       ),
     );

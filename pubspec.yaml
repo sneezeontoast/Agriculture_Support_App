@@ -40,8 +40,8 @@ dependencies:
   video_player:
   url_launcher:
   http:
-  flutter_weather_icons:
-    path: ../flutter_weather_icons
+  # flutter_weather_icons:
+    # path: ../flutter_weather_icons
 
 dev_dependencies:
   flutter_test:

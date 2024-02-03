@@ -15,7 +15,7 @@ export 'routes.dart';
 //----------------------------------------------------------------------
 
 export 'package:http/http.dart';
-export 'package:flutter_weather_icons/flutter_weather_icons.dart';
+//export 'package:flutter_weather_icons/flutter_weather_icons.dart';
 
 //----------------------------------------------------------------------
 // Demo Screen Imports - export to allow inclusion in navigation
@@ -41,7 +41,9 @@ export 'demo_widgets/demo_list_tile_widget.dart'; // Custom list tile
 //----------------------------------------------------------------------
 
 export 'demo_data/demo_list_data_model.dart'; // Model for Demo List Data
-export 'demo_data/demo_static_data.dart'; // Static data sources
+export 'data/how_to_data.dart'; // Static data sources
+// export 'data/home_data.dart';
+// export 'demo_data/demo_static_data.dart';
 
 //----------------------------------------------------------------------
 // Demo Service Imports - functionality for the app

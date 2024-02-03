@@ -21,15 +21,24 @@ export 'package:chewie/chewie.dart';
 //export the screens
 //----------------------------------------------------------------------
 
-export 'screens/home_screen.dart'; //home screen
+export 'screens/old_home_screen.dart'; //home screen
+export 'screens/home_screen.dart';
+export 'screens/compost_intro.dart';
+export 'screens/simple_screen.dart';
 
 //----------------------------------------------------------------------
 //export video player
 //----------------------------------------------------------------------
 //export full my video player
 export 'widgets/VideoPlayer.dart';
+
 export 'widgets/check_box.dart';
 export 'widgets/course_page.dart';
-export 'screens/simple_screen.dart';
+export 'widgets/content_slider.dart';
+export 'widgets/cool_button.dart';
+export 'widgets/list_vertical_widget.dart';
+
+
+
 
 

@@ -1,4 +1,4 @@
-import 'package:agriculture_support_app/data/home_data.dart';
+// import 'package:agriculture_support_app/data/home_data.dart';
 
 import '../demo_imports.dart';
 import '../imports.dart';
@@ -13,20 +13,21 @@ import '../imports.dart';
 // This widget displays a vertical list of widgets
 //------------------------------------------------------------------------------
 
-class DemoListVerticalWidget extends StatefulWidget {
-  const DemoListVerticalWidget({super.key});
+class ListVerticalWidget extends StatefulWidget {
+  final data_class;
+  const ListVerticalWidget({Key? key, required this.data_class}) : super(key: key);
 
   @override
-  State<DemoListVerticalWidget> createState() => _DemoListVerticalWidgetState();
+  State<ListVerticalWidget> createState() => _ListVerticalWidgetState();
 }
 
-class _DemoListVerticalWidgetState extends State<DemoListVerticalWidget> {
+class _ListVerticalWidgetState extends State<ListVerticalWidget> {
 
   List screenData = [];
 
   @override
   Widget build(BuildContext context) {
-    List<dynamic> rawList = json.decode(HowToStaticData().demoListData); // Converts JSON String to List
+    List<dynamic> rawList = json.decode(widget.data_class.demoListData); // Converts JSON String to List
 
     // Listview Builder takes data and uses it to create a list of widgets based on the data
     return ListView.builder(
@@ -34,7 +35,7 @@ class _DemoListVerticalWidgetState extends State<DemoListVerticalWidget> {
       itemBuilder: (context, index) {
         // Convert each item to a ScreenItem just when it's needed for rendering
         DemoListItem item = DemoListItem.fromJson(rawList[index]); // Covert item from raw list item
-       // ListTile is a default widget in flutter. You can create your own widget for this
+        // ListTile is a default widget in flutter. You can create your own widget for this
         return ListTile(
           leading: item.image.isNotEmpty ? Icon(Icons.photo, size: 50.0, color: Colors.green,) : null, // Only displays if image available
           title: Text(item.title),
@@ -47,10 +48,10 @@ class _DemoListVerticalWidgetState extends State<DemoListVerticalWidget> {
 
 
               Navigator.pushNamed(context, item.route);
-                // MaterialPageRoute(builder: (context) => CourseScreen(
-                //     title: 'Compost', text_1: 'hello hevkcvef',
-                //     text_2: "i have done it",
-                //     video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4')),
+              // MaterialPageRoute(builder: (context) => CourseScreen(
+              //     title: 'Compost', text_1: 'hello hevkcvef',
+              //     text_2: "i have done it",
+              //     video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4')),
             });
           },
         );
