@@ -9,5 +9,6 @@ var customRoutes = <String, WidgetBuilder>{
   '/demo_home': (context) => DemoHomeScreen(),
   '/dummy_screen': (context) => DummyScreen(),
   '/course_screen': (context) => CourseScreen(),
+  '/compost_intro': (context) => CompostIntro(),
   //'/demo_weather': (context) => DemoApiListScreen(),
 };

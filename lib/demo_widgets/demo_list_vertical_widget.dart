@@ -26,7 +26,7 @@ class _DemoListVerticalWidgetState extends State<DemoListVerticalWidget> {
 
   @override
   Widget build(BuildContext context) {
-    List<dynamic> rawList = json.decode(HowToStaticData().demoListData); // Converts JSON String to List
+    List<dynamic> rawList = json.decode(HomeStaticData().demoListData); // Converts JSON String to List
 
     // Listview Builder takes data and uses it to create a list of widgets based on the data
     return ListView.builder(

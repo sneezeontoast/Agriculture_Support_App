@@ -47,7 +47,7 @@ class _ListVerticalWidgetState extends State<ListVerticalWidget> {
             setState(() {
 
 
-              Navigator.pushNamed(context, item.route);
+              // Navigator.pushNamed(context, item.route);
               // MaterialPageRoute(builder: (context) => CourseScreen(
               //     title: 'Compost', text_1: 'hello hevkcvef',
               //     text_2: "i have done it",

@@ -7,13 +7,13 @@ class HowToStaticData {
       "image": "https://via.placeholder.com/150", 
       "title": "How To Do Compost",
       "details": "Click Here For More info",
-      "route": "/course_screen"
+      "route": "/compost_intro"
     },
     {
       "image": "https://via.placeholder.com/150",
       "title": "How To Not Use Fertiliser",
       "details": "Click Here For More info",
-      "route": "/cool_button"
+      "route": "/dummy_screen"
     },
     {
       "image": "https://via.placeholder.com/150", 

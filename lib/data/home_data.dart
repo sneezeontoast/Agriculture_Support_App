@@ -7,7 +7,7 @@ class HomeStaticData {
       "image": "https://via.placeholder.com/150", 
       "title": "How To Do Compost",
       "details": "Click Here For More info",
-      "route": "/course_screen"
+      "route": "/comopost_intro"
     },
     {
       "image": "https://via.placeholder.com/150",

@@ -50,10 +50,11 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           // DemoListHorizontalWidget()
           // ContextSlider(),
           // CoolButton()
-          Expanded(child: DemoListVerticalWidget()),
+          Expanded(child: ListVerticalWidget(data_class: HowToStaticData())),
           // CompostIntro()
           // Center(child: Text("you are in More"))
-          ListVerticalWidget(data_class: HomeStaticData())
+          // ListVerticalWidget(data_class: HomeStaticData())
+          UnlockButton()
 
 
 

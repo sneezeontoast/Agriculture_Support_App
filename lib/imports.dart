@@ -37,7 +37,8 @@ export 'widgets/course_page.dart';
 export 'widgets/content_slider.dart';
 export 'widgets/cool_button.dart';
 export 'widgets/list_vertical_widget.dart';
-
+export 'widgets/unlock_icon_button.dart';
+export 'data/course_scroll_data_model.dart';
 
 
 
