@@ -35,6 +35,7 @@ export 'demo_widgets/demo_slider_widget.dart'; // Slider for home screen
 export 'demo_widgets/demo_list_vertical_widget.dart'; // Vertical List
 export 'demo_widgets/demo_list_horizontal_widget.dart'; // Horzontal List
 export 'demo_widgets/demo_list_tile_widget.dart'; // Custom list tile
+export 'demo_widgets/demo_course_tracker.dart';
 
 //----------------------------------------------------------------------
 // Demo Data Imports - export to allow data to be used across the app
