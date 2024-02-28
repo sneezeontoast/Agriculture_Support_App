@@ -1,5 +1,5 @@
 import 'package:agriculture_support_app/data/home_data.dart';
-import 'package:agriculture_support_app/demo_imports.dart';
+
 
 import '../imports.dart';
 
@@ -22,6 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView(
@@ -67,15 +71,25 @@ class _HomeScreenState extends State<HomeScreen> {
                         // fontWeight: FontWeight.bold,
                       )),
                   // ListVerticalWidget(data_class: HomeStaticData()),
-                  SizedBox(
-                    width: 280,
-                    height: 270,
-                    child: ListVerticalWidget(data_class: HowToStaticData()),
+
+                  Expanded(
+                      child: ListVerticalWidget(data_class: HomeStaticData()),
                   ),
                   // Expanded(child: ListVerticalWidget(data_class: HowToStaticData())),
 
                   // CoolButton(),
                   Text(text_1),
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(
+                        maxHeight: 200,
+                        minHeight: 40,
+                        maxWidth: 200,
+                        minWidth: 40),
+                    child: Container(
+                      child: CourseScroll(),
+                    ),
+                  ),
+
                   // CourseScreen(title: 'Hello World')
                   // ElevatedButton(
                   //   child: Text('Do a compost course'),

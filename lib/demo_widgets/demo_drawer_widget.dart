@@ -14,6 +14,6 @@ class DemoDrawerWidget extends StatelessWidget {
           Text('Menu')
         ],
       ),
-    );;
+    );
   }
 }

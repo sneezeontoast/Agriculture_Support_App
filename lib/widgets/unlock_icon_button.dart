@@ -1,7 +1,12 @@
 import 'package:agriculture_support_app/imports.dart';
 
 class UnlockButton extends StatefulWidget {
-  const UnlockButton({super.key});
+  final bool myIconUnlocked;
+  final String title;
+
+  // final my_icon_unlocked;
+  const UnlockButton({super.key, required this.myIconUnlocked, required this.title});
+  // const UnlockButton({Key? key, required this.my_icon}) : super(key: key);
 
   @override
   State<UnlockButton> createState() => _UnlockButtonState();
@@ -9,56 +14,46 @@ class UnlockButton extends StatefulWidget {
 
 class _UnlockButtonState extends State<UnlockButton> {
 
-  IconData my_icon = Icons.lock;
+  var myIcon = Icon(Icons.lock);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Column(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(15.0),
-                child: SizedBox(
-                  width: 100,
-                  height: 90,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder()
-                    ),
-                    child: Stack(
-                      children: <Widget> [
-                        SizedBox(
-                          width: 90,
-                          height: 90,
-                          child: Icon(
-                            my_icon,
-                          ),
-                        ),
-                        Text(
-                          'Part 1',
-                          style: TextStyle(fontSize: 16),
-                        ),
+    // print(("widget.myIconUnlocked: ", widget.myIconUnlocked));
+    // print(("widget.title: ", widget.title));
+    return
+      Card(
+        // style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder()),
+        child: Stack(
+          children: <Widget>[
+            SizedBox(
+                width: 90,
+                height: 90,
+                child: widget.myIconUnlocked
+                    ? myIcon = Icon(Icons.lock_open) // ask chris why this didnt work
+                    : myIcon = Icon(Icons.lock)),
 
-                      ],
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        Icon(
-                          my_icon = Icons.lock_open,
-                        );
-                      }
-                      );
-
-
-                    },
-                  ),
-                )
-              ),
-
-            ]
-        )
+            Text(
+              "stage " + widget.title,
+              style: TextStyle(fontSize: 16),
+            ),
+          ],
+        ),
+        // onPressed: () {
+        //   setState(() {
+        //
+        //   });
+        // },
+        // onPressed: () {
+        //   setState(() {
+        //     Icon(
+        //       widget.my_icon = Icons.lock_open,
+        //     );
+        //   }
+        //   );
+        //
+        //
+        // },
     );
-
 
   }
 }

@@ -1,5 +1,5 @@
-import 'package:agriculture_support_app/data/home_data.dart';
-import 'package:agriculture_support_app/data/how_to_data.dart';
+// import 'package:agriculture_support_app/data/home_data.dart';
+// import 'package:agriculture_support_app/data/how_to_data.dart';
 
 import '../imports.dart';
 
@@ -27,7 +27,7 @@ class CompostIntro extends StatelessWidget {
               ElevatedButton(
                 child: Text('Do a compost course'),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/course_screen');
+                  Navigator.pushNamed(context, '/course_home_screen');
                 },
               ),
 

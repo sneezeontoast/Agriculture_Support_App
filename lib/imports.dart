@@ -25,6 +25,8 @@ export 'screens/old_home_screen.dart'; //home screen
 export 'screens/home_screen.dart';
 export 'screens/compost_intro.dart';
 export 'screens/simple_screen.dart';
+export 'screens/how_to_screen.dart';
+export 'screens/course_tutorial.dart';
 
 //----------------------------------------------------------------------
 //export video player
@@ -38,7 +40,12 @@ export 'widgets/content_slider.dart';
 export 'widgets/cool_button.dart';
 export 'widgets/list_vertical_widget.dart';
 export 'widgets/unlock_icon_button.dart';
+export 'widgets/course_scroll.dart';
+
+// data imports //
 export 'data/course_scroll_data_model.dart';
+export 'data/course_scroll_data.dart';
+
 
 
 

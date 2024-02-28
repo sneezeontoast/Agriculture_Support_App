@@ -1,5 +1,6 @@
 import 'package:agriculture_support_app/data/home_data.dart';
-import 'package:agriculture_support_app/demo_imports.dart';
+// import 'package:agriculture_support_app/demo_imports.dart';
+import 'package:agriculture_support_app/widgets/course_scroll.dart';
 
 import '../imports.dart';
 import '../demo_imports.dart';
@@ -19,6 +20,20 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     super.initState();
     _tabController = TabController(length: 3, vsync: this); // Initialize _tabController in initState
   }
+  List screenData = [
+    {"type": "subtitle", "content": "How To Make Compost To Feed Your Plants And Reduce Waste"},
+    {
+      "type": "video",
+      "content":
+      "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
+    },
+    {"type": "bulletpoint", "content": "Use green and brown materials"},
+    {"type": "text", "content": "To make your own hot compost heap wait until you have a enough materials to make a pile of compost at least 3 feat deep with a combination of wet (green) items dry items brown materials include dryed plant materials fallen leaves shreaded tree branches cardboard newspaper hay straw and wood shavings. These items add carbon. Green materials include kitchen scraps coffee grounds animal manure (not from dogs or cats) and then, fresh plant and grass trimmings. These Items add nitrogen. "},
+    {"type": "text", "content": "For best results start building your compost by mixing three parts brown materials with one part green material. If your compost pile looks to wet and smells unpleasant add more brown items or mix your compost with a garden fork to aerate. if you see it looks extremly brown and dry add green items and water to make it slightly moist."},
+
+
+
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -50,13 +65,18 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           // DemoListHorizontalWidget()
           // ContextSlider(),
           // CoolButton()
-          Expanded(child: ListVerticalWidget(data_class: HowToStaticData())),
+          // HowToScreen(),
+          Expanded(child: ListVerticalWidget(data_class: HomeStaticData())),
           // CompostIntro()
           // Center(child: Text("you are in More"))
           // ListVerticalWidget(data_class: HomeStaticData())
-          UnlockButton()
-
-
+          // UnlockButton(myIconUnlocked: true)
+          // CourseScroll(),
+          // CourseScroll(),
+          // HowToScreen(),
+          //
+          CourseTutorial(title: "How To Build Compost", stage: 1.toString(), screenData: screenData)
+          // CourseTutorial(title: "Title ", stage: 1.toString(),)
 
         ],
       ),
