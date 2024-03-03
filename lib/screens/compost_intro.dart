@@ -10,7 +10,7 @@ class CompostIntro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('How To Do Compost'),
+        title: Text('How To Compost'),
       ),
       body: ListView(
 
@@ -25,7 +25,7 @@ class CompostIntro extends StatelessWidget {
               padding: EdgeInsets.only(left: 170.0, right: 19.0),
             child:
               ElevatedButton(
-                child: Text('Do a compost course'),
+                child: Text('Do a composting course'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/course_home_screen');
                 },

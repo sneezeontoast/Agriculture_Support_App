@@ -34,7 +34,7 @@ class ContextSlider extends StatelessWidget {
                     ),),
                   Container(color: Colors.green,
                     child: Center(
-                      child: Text('You should do compost!!'),
+                      child: Text('You should start composting!!'),
                     ),
                   ),
                 ],

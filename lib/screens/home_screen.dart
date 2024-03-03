@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   // CourseScreen(title: 'Hello World')
                   // ElevatedButton(
-                  //   child: Text('Do a compost course'),
+                  //   child: Text('Do a composting course'),
                   //   onPressed: () {
                   //     CheckBox();
                   //   },

@@ -5,7 +5,7 @@ class HomeStaticData {
   final String demoListData = '''[
     {
       "image": "https://via.placeholder.com/150", 
-      "title": "How To Do Compost",
+      "title": "How To Compost",
       "details": "Click Here For More info",
       "route": "/compost_intro"
     },
