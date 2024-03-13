@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.yellow[20],
         body: ListView(
           padding: const EdgeInsets.all(8),
           // scrollDirection: Axis.vertical,
@@ -78,17 +79,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   // Expanded(child: ListVerticalWidget(data_class: HowToStaticData())),
 
                   // CoolButton(),
+                  Padding(padding: EdgeInsets.all(17.0)),
                   Text(text_1),
-                  ConstrainedBox(
-                    constraints: const BoxConstraints(
-                        maxHeight: 200,
-                        minHeight: 40,
-                        maxWidth: 200,
-                        minWidth: 40),
-                    child: Container(
-                      child: CourseScroll(),
-                    ),
-                  ),
+                  // ConstrainedBox(
+                  //   constraints: const BoxConstraints(
+                  //       maxHeight: 200,
+                  //       minHeight: 40,
+                  //       maxWidth: 200,
+                  //       minWidth: 40),
+                  //   child: Container(
+                  //     child: CourseScroll(),
+                  //   ),
+                  // ),
 
                   // CourseScreen(title: 'Hello World')
                   // ElevatedButton(

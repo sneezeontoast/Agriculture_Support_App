@@ -20,8 +20,10 @@ class _CourseScrollState extends State<CourseScroll> {
     // {'stage7':false}, // uncomment if stage7 is added into routes.dart
   ];
 
+
   @override
   Widget build(BuildContext context) {
+    // for (int i = 0, i <= progress.length; i++)
     print("we should use json");
     return Container( // container cant take const
       width: MediaQuery.of(context).size.width - 16.0, // MediaQuery.of(context).size.width is width of screen and then - 16.0 to add padding

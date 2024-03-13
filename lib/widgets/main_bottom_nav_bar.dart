@@ -1,3 +1,5 @@
+import 'package:agriculture_support_app/data/home_data.dart';
+
 import '../imports.dart';
 
 class BottomMainNavBar extends StatefulWidget {
@@ -12,10 +14,14 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
 
   final pages = [
     HomeScreen(),
-    HowToScreen(),
+    ListVerticalWidget(data_class: HomeStaticData()),
+
     Text("add  tools such as timers to remind you of compost and reminders of weather"),
-    Text("Add The weather forecast here we maybe should change the icon to the current weather"),
-    Text("information this might not be needed")
+    // Text("Add The weather forecast here we maybe should change the icon to the current weather"),
+    WeatherScreen(),
+    HowToScreen(),
+
+    // Text("information this might not be needed")
 
   ];
   
@@ -24,6 +30,11 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [Colors.green, Theme.of(context).primaryColor]),
+          ),
+        ),
 
         actions: <Widget> [
           // Padding(
@@ -56,6 +67,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
       bottomNavigationBar: Container(
         height: 60,
         decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [Theme.of(context).primaryColor, Colors.green]),
 
           color: Theme.of(context).primaryColor, // make the nav bar the themed colour of the app
           borderRadius: const BorderRadius.only(

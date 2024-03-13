@@ -13,6 +13,7 @@ class HowToScreen extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.yellow[20],
         body: Column(
           children: <Widget>[
             const Center(

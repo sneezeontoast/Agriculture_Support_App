@@ -6,6 +6,7 @@
 //----------------------------------------------------------------------
 
 export 'package:flutter/material.dart';
+// export 'package:google_fonts/google_fonts.dart';
 export 'dart:convert';
 export 'routes.dart';
 
@@ -27,6 +28,7 @@ export 'screens/compost_intro.dart';
 export 'screens/simple_screen.dart';
 export 'screens/how_to_screen.dart';
 export 'screens/course_tutorial.dart';
+export 'screens/weather_screen.dart';
 
 //----------------------------------------------------------------------
 //export video player
@@ -41,6 +43,7 @@ export 'widgets/cool_button.dart';
 export 'widgets/list_vertical_widget.dart';
 export 'widgets/unlock_icon_button.dart';
 export 'widgets/course_scroll.dart';
+export 'widgets/weather_card.dart';
 
 // data imports //
 export 'data/course_scroll_data_model.dart';

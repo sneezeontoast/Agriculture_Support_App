@@ -8,6 +8,7 @@ class ContextSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow[20],
       body: Padding(
         padding: const EdgeInsets.all(15.0), // Provide padding around the page content
         child: Column(
