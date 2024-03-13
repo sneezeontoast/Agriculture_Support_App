@@ -21,93 +21,50 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-
-      ),
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.yellow[20],
-        body: ListView(
-          padding: const EdgeInsets.all(8),
-          // scrollDirection: Axis.vertical,
-          children: <Widget>[
-            const Center(
-              child: Text(
-                'Welcome',
-                style: TextStyle(
-                  fontSize: 50,
-                  color: Colors.green,
-                  //decoration: TextDecoration.underline,
-                  fontWeight: FontWeight.bold,
-                ),
-              ), // Text above the video
+    return CustomScrollView(
+      slivers: <Widget>[
+        SliverAppBar(
+          expandedHeight: 150.0,
+          backgroundColor: Colors.green,
+          floating: false,
+          pinned: true,
+          flexibleSpace: FlexibleSpaceBar(
+            title: Text('Agriculture Support App'),
+            background: Image.asset(
+              'lib/assets/tea.png',
+              fit: BoxFit.cover,
             ),
-            //SizedBox(height: 0), // Reduced height
-            ConstrainedBox(
-                constraints: BoxConstraints(
-                    maxHeight: 300,
-                    minHeight: 200,
-                    maxWidth: 500,
-                    minWidth: 200),
-                child: Container(
-                  child: ContextSlider(), // contents here
-                )),
-
-            Container(
-              width: 1000, // Set the maximum width
-              height: 700, // Set the maximum height
-              child: Column(
-                //alignment: Alignment.bottomRight,
-
-                children: <Widget>[
-                  // ListVerticalWidget(data_class: HomeStaticData()),
-                  //Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
-                  Text('To The Agriculture Support App',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.green,
-                        // decoration: TextDecoration.underline,
-                        // fontWeight: FontWeight.bold,
-                      )),
-                  // ListVerticalWidget(data_class: HomeStaticData()),
-
-                  Expanded(
-                      child: ListVerticalWidget(data_class: HomeStaticData()),
-                  ),
-                  // Expanded(child: ListVerticalWidget(data_class: HowToStaticData())),
-
-                  // CoolButton(),
-                  Padding(padding: EdgeInsets.all(17.0)),
-                  Text(text_1),
-                  // ConstrainedBox(
-                  //   constraints: const BoxConstraints(
-                  //       maxHeight: 200,
-                  //       minHeight: 40,
-                  //       maxWidth: 200,
-                  //       minWidth: 40),
-                  //   child: Container(
-                  //     child: CourseScroll(),
-                  //   ),
-                  // ),
-
-                  // CourseScreen(title: 'Hello World')
-                  // ElevatedButton(
-                  //   child: Text('Do a composting course'),
-                  //   onPressed: () {
-                  //     CheckBox();
-                  //   },
-                  // ),
-                ],
-              ),
-            ),
-            //SizedBox(height: 0), // Adjust the size as needed
-            // Text below the video
-            //SizedBox(height: 10), // Adjust the size as needed
-          ],
+          ),
         ),
-      ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 15.0),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: (MediaQuery.of(context).size.width / 16) * 10, // Adjust based on your context slider's height
+            child: ContextSlider(), // Assuming this is a widget that can be placed directly
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'To The Agriculture Support App',
+              style: TextStyle(fontSize: 30, color: Colors.green),
+            ),
+          ),
+        ),
+        SliverList(
+          delegate: SliverChildListDelegate([
+            ListVerticalWidget(data_class: HomeStaticData()),
+            Padding(padding: EdgeInsets.all(17.0)),
+            Text(text_1, style: TextStyle(color: Colors.black)),
+          ]),
+        ),
+      ],
     );
+
   }
 }
