@@ -75,7 +75,7 @@ class _DemoApiListScreenState extends State<DemoApiListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Weather Data Demo'),
+          title: Text('Weather Data Demo', style: Theme.of(context).textTheme.bodyMedium),
         ),
         body: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -84,9 +84,9 @@ class _DemoApiListScreenState extends State<DemoApiListScreen> {
             physics: NeverScrollableScrollPhysics(),
             children: [
               ListTile(
-                leading: Text('Rain/\nMax '),
-                title: Text('Details'),
-                trailing: Text('Daylight Hours'),
+                leading: Text('Rain/\nMax ', style: Theme.of(context).textTheme.bodyMedium),
+                title: Text('Details', style: Theme.of(context).textTheme.bodyMedium),
+                trailing: Text('Daylight Hours', style: Theme.of(context).textTheme.bodyMedium),
               ),
               Divider(),
               ListView.builder(

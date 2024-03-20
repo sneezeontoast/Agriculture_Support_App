@@ -9,7 +9,53 @@ import 'imports.dart';
 
 //import 'package:flutter_inappwebview-master'
 // The main function is the starting point for all Flutter app
-const context = Text('Hi This is cool');
+const String FontNameDefault = 'PT_Serif';
+
+const AppBarTextStyle = TextStyle(
+  fontFamily: FontNameDefault,
+  fontWeight: FontWeight.w300,
+  fontSize: 20.0, // a good medium text size
+  color: Colors.white,
+);
+
+const TitleTextStyle = TextStyle(
+  fontFamily: FontNameDefault,
+  fontWeight: FontWeight.w300,
+  fontSize: 26.0,
+  color: Colors.black,
+);
+
+const BodyMediumTextStyle = TextStyle(
+  fontFamily: FontNameDefault,
+  fontWeight: FontWeight.w300,
+  fontSize: 25.0,
+  color: Colors.black,
+);
+
+const BodySmallTextStyle = TextStyle(
+  fontFamily: FontNameDefault,
+  fontWeight: FontWeight.w300,
+  fontSize: 20.0,
+  color: Colors.black,
+);
+
+const BodyLargeTextStyle = TextStyle(
+  fontFamily: FontNameDefault,
+  fontWeight: FontWeight.w300,
+  fontSize: 16.0,
+  color: Colors.black,
+);
+
+const BigGreenTitle = TextStyle(
+  fontFamily: FontNameDefault,
+  fontWeight: FontWeight.w300,
+  fontSize: 30,
+  color: Colors.green,
+);
+
+
+
+// const context = Text('Hi This is cool');
 void main() {
   return runApp(MyApp());
 }
@@ -25,6 +71,21 @@ class MyApp extends StatelessWidget {
       title:
           'Agricultural Support App!', // The title that Android shows for your app
       theme: ThemeData(
+        textTheme: TextTheme(
+          titleMedium: TitleTextStyle,
+          bodySmall: BodySmallTextStyle,
+          bodyLarge: BodyLargeTextStyle,
+          bodyMedium: BodyMediumTextStyle,
+          titleLarge: BigGreenTitle,
+
+        ),
+        // appBarTheme: AppBarTheme(
+        //
+        // ),
+        // textTheme: TextTheme(
+        //   titleMedium: ,
+        //
+        // ),
         primarySwatch: Colors.green, // The primary color of your app
         // textTheme: GoogleFonts.emilysCandyTextTheme(),
         // textTheme: GoogleFonts.latoTextTheme(),

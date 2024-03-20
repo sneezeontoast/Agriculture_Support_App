@@ -8,7 +8,7 @@ class CompostOverveiw extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('How To Make Compost'),
+        title: Text('How To Make Compost', style: Theme.of(context).textTheme.bodyMedium),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
@@ -19,9 +19,10 @@ class CompostOverveiw extends StatelessWidget {
           ),
 
 
-          const Padding(padding: EdgeInsets.all(20.0),
+         Padding(padding: EdgeInsets.all(20.0),
               child:
-              Text('Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.',
+              Text('Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.', style: Theme.of(context).textTheme.bodyMedium
+
                 // textAlign: TextAlign.center
               )
           ),

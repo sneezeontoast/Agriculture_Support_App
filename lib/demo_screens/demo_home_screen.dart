@@ -18,7 +18,7 @@ class DemoHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Demo Home'), // Title in App Bar on the screen
+        title: Text('Demo Home', style: Theme.of(context).textTheme.bodyMedium), // Title in App Bar on the screen
         // Add a button on the left hand side to show the menu button
         leading: IconButton(
           icon: Icon(Icons.menu), // Icon in left side of AppBar

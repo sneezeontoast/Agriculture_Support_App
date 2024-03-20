@@ -29,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Button')),
+      appBar: AppBar(
+          title: Text('Button', style: Theme.of(context).textTheme.bodyMedium)
+      ),
       body: Center(
         child: SizedBox(
           width: 300,
@@ -49,8 +51,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Clear all showing snack bars
                 ScaffoldMessenger.of(context).clearSnackBars();
                 // Display a snack bar
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text("Let's me sleep. Don't touch me!"),
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text("Let's me sleep. Don't touch me!", style: Theme.of(context).textTheme.bodyMedium),
                 ));
               },
               // Add image & text

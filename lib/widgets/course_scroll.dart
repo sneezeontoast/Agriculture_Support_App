@@ -23,7 +23,7 @@ class _CourseScrollState extends State<CourseScroll> {
 
   @override
   Widget build(BuildContext context) {
-    // for (int i = 0, i <= progress.length; i++)
+
     print("we should use json");
     return Container( // container cant take const
       width: MediaQuery.of(context).size.width - 16.0, // MediaQuery.of(context).size.width is width of screen and then - 16.0 to add padding
@@ -39,12 +39,14 @@ class _CourseScrollState extends State<CourseScroll> {
               padding: const EdgeInsets.all(8.0), // why do you need pading whenthere is already conatiner size
               child: GestureDetector( // detect movement
                 onTap: (){ // when tapped
+
                   // 'stage'+(index+1) is making the elment on the list so stage nd then the button being pressed + 1 because flutter starts from zero
 
                   // this will see if the list is has been clicked is false the plus one is to make count from one instead of zero then true or false to sting and compares
                   if( progress[index]['stage' + (index+1).toString()] == false){ // false is not capital f like in python
                     progress[index]['stage'+(index+1).toString()] = true;
                     Navigator.pushNamed(context, '/compost_course_stage_'+(index+1).toString());
+
 
 
                   } else {

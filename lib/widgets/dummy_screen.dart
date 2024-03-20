@@ -12,14 +12,14 @@ class DummyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Title'),
+          title: Text('Title', style: Theme.of(context).textTheme.bodyMedium),
         ),
         body: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Para_1'),
+            Text('Para_1', style: Theme.of(context).textTheme.bodyMedium),
 
-            Text('Para_2'),
+            Text('Para_2', style: Theme.of(context).textTheme.bodyMedium),
 
             // Video_Player(video_link: video_link)
           ],

@@ -50,8 +50,8 @@ class _ListVerticalWidgetState extends State<ListVerticalWidget> {
                 color: Colors.green,
               )
                   : null, // Only displays if image available
-              title: Text(item.title),
-              subtitle: Text(item.details),
+              title: Text(item.title, style: Theme.of(context).textTheme.bodyMedium),
+              subtitle: Text(item.details, style: Theme.of(context).textTheme.bodyMedium),
               // route: Text(item.r),
               // navigate: Text(item.navigate),
               onTap: () {

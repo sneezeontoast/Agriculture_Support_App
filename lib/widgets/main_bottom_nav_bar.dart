@@ -16,7 +16,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
     HomeScreen(),
     ListVerticalWidget(data_class: HomeStaticData()),
 
-    Text("add  tools such as timers to remind you of compost and reminders of weather"),
+    Text(findWeather((100, 100, 100, 100))),
     // Text("Add The weather forecast here we maybe should change the icon to the current weather"),
     WeatherScreen(),
     HowToScreen(),
