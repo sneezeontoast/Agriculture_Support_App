@@ -1,17 +1,17 @@
 // Import my import file which imports everything
+// import 'package:google_fonts/google_fonts.dart';
+
 import 'imports.dart';
-import 'demo_imports.dart';
+//import 'demo_imports.dart';
 //import 'package:webview_flutter/webview_flutter.dart';
 
-
-
-// the reason why there is a gap between video and bottom text is it is in a seperate column
+// the reason why there is a gap between video and bottom text is it is in a seperate colum
 
 //import 'package:flutter_inappwebview-master'
 // The main function is the starting point for all Flutter app
 const context = Text('Hi This is cool');
-void main() {return
-  runApp(MyApp());
+void main() {
+  return runApp(MyApp());
 }
 
 // MyApp is a StatelessWidget which is the root of your application
@@ -22,12 +22,28 @@ class MyApp extends StatelessWidget {
     //debugShowCheckedModeBanner: false,
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Agricultural Support App!', // The title that Android shows for your app
+      title:
+          'Agricultural Support App!', // The title that Android shows for your app
       theme: ThemeData(
         primarySwatch: Colors.green, // The primary color of your app
+        // textTheme: GoogleFonts.emilysCandyTextTheme(),
+        // textTheme: GoogleFonts.latoTextTheme(),
+        useMaterial3: true,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        // primarySwatch: Colors.green, // The primary color of your app
+        primaryColor: Colors.green[850],
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.green.shade900,
+          // brightness: Brightness.,
+          // seedColor: Colors.green[800],
+        ),
+        scaffoldBackgroundColor: Colors.yellow[20],
+
+
       ),
-      routes: customRoutes,// The widget that will be shown when the app is run
+      routes: customRoutes, // The widget that will be shown when the app is run
     );
   }
 }
-

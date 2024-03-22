@@ -15,7 +15,7 @@ export 'routes.dart';
 //----------------------------------------------------------------------
 
 export 'package:http/http.dart';
-export 'package:flutter_weather_icons/flutter_weather_icons.dart';
+//export 'package:flutter_weather_icons/flutter_weather_icons.dart';
 
 //----------------------------------------------------------------------
 // Demo Screen Imports - export to allow inclusion in navigation
@@ -37,13 +37,16 @@ export 'demo_widgets/demo_slider_widget.dart'; // Slider for home screen
 export 'demo_widgets/demo_list_vertical_widget.dart'; // Vertical List
 export 'demo_widgets/demo_list_horizontal_widget.dart'; // Horizontal List
 export 'demo_widgets/demo_list_tile_widget.dart'; // Custom list tile
+export 'demo_widgets/demo_course_tracker.dart';
 
 //----------------------------------------------------------------------
 // Demo Data Imports - export to allow data to be used across the app
 //----------------------------------------------------------------------
 
 export 'demo_data/demo_list_data_model.dart'; // Model for Demo List Data
-export 'demo_data/demo_static_data.dart'; // Static data sources
+export 'data/how_to_data.dart'; // Static data sources
+// export 'data/home_data.dart';
+// export 'demo_data/demo_static_data.dart';
 
 //----------------------------------------------------------------------
 // Demo Service Imports - functionality for the app
