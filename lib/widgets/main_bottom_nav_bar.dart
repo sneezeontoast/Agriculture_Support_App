@@ -30,7 +30,8 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+
+   /*   appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [Colors.green, Theme.of(context).primaryColor]),
@@ -64,6 +65,8 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
         ),
         backgroundColor: Theme.of(context).primaryColor,
       ),
+
+    */
       body: pages[pageIndex],
       bottomNavigationBar: Container(
         height: 60,

@@ -49,6 +49,8 @@ class _DemoApiListScreenState extends State<DemoApiListScreen> {
   //----------------------------------------------------------------------------
 
   String removeDecimalAndTwoDigits(String input) {
+
+
     int decimalIndex =
         input.indexOf('.'); // Find the index of the decimal point
     if (decimalIndex != -1) {
@@ -56,6 +58,7 @@ class _DemoApiListScreenState extends State<DemoApiListScreen> {
       return input.substring(0, decimalIndex);
     }
     return input; // Return the original string if no decimal point is found
+    // return double.parse(input).toStringAsFixed(0);  REPLACE WITH THIS // PDS
   }
 
   // Run functions when screen is initialized

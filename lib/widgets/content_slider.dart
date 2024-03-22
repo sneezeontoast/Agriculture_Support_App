@@ -7,12 +7,7 @@ class ContextSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.yellow[20],
-      body: Padding(
-        padding: const EdgeInsets.all(15.0), // Provide padding around the page content
-        child: Column(
-          children: [
+    return
             Container(
               width: MediaQuery.of(context).size.width,
               height: (MediaQuery.of(context).size.width/16) *9,
@@ -41,13 +36,10 @@ class ContextSlider extends StatelessWidget {
                 ],
                 switchDuration: Duration(seconds: 15), // Change this value to adjust auto-slide duration
               ),
-            ),
+            );
             //Expanded(child: DemoListVerticalWidget()) // Vertical Listview from demo data JSON String
             //Text('hello'),
-          ],
-        ),
-      ),
-    );
+
   }
 }
 
