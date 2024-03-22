@@ -24,6 +24,8 @@ export 'package:flutter_weather_icons/flutter_weather_icons.dart';
 export 'demo_screens/demo_home_screen.dart'; // Demo Home Screen
 export 'demo_screens/demo_information_screen.dart'; // Normal info Screen
 export 'demo_screens/demo_api_list_screen.dart'; // List fetching from api
+export 'demo_screens/demo_weather_svg_graphs.dart'; // Weather data as svg
+export 'demo_screens/display_svg_screen.dart'; // Display svg graphics
 
 //----------------------------------------------------------------------
 // Demo Widget Imports - export to allow use of widgets in screens
@@ -33,7 +35,7 @@ export 'demo_widgets/demo_drawer_widget.dart'; // Left menu example
 export 'demo_widgets/demo_info_bar.dart'; // Information bar example
 export 'demo_widgets/demo_slider_widget.dart'; // Slider for home screen
 export 'demo_widgets/demo_list_vertical_widget.dart'; // Vertical List
-export 'demo_widgets/demo_list_horizontal_widget.dart'; // Horzontal List
+export 'demo_widgets/demo_list_horizontal_widget.dart'; // Horizontal List
 export 'demo_widgets/demo_list_tile_widget.dart'; // Custom list tile
 
 //----------------------------------------------------------------------

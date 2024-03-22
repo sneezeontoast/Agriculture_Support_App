@@ -6,7 +6,7 @@ import 'weather_data_api_service.dart';
 //import 'dart:js_interop';
 //import 'package:flutter/material.dart'
 
-void main() async {
+getWeatherData() async {
 
   List weatherData = [];
   String response = "";
@@ -17,8 +17,8 @@ void main() async {
         latitude: 52.52,
         longitude: 14.41,
         timezone: 'Africa/Cairo',
-        pastDays: 0,
-        forecastDays: 7);
+        pastDays: 7,
+        forecastDays: 14);
     //weatherData = data;
   Map<String, dynamic> dailyMeasurements = data;
   //print(weatherData.toString());
@@ -26,16 +26,19 @@ void main() async {
   //  return weatherData;
   //}
 
-  print(dailyMeasurements);
+
+  //print(dailyMeasurements);
   List<String> dates = List<String>.from(dailyMeasurements['time']);
   List<double> temps_max = List<double>.from(dailyMeasurements['temperature_2m_max']);
   List<double> temps_min = List<double>.from(dailyMeasurements['temperature_2m_min']);
   List<double> temps_avg = List<double>.from(dailyMeasurements['temperature_2m_mean']);
-  print(dates);
+  weatherData = [dates,temps_max,temps_min,temps_avg];
+  /* print(dates);
   print(temps_max);
   print(temps_min);
   print(temps_avg);
-
+ */
+  return [dates, temps_max, temps_min, temps_avg];
 
 
 

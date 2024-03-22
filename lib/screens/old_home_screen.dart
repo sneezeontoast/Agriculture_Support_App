@@ -1,5 +1,5 @@
 import '../imports.dart';
-
+import 'package:agriculture_support_app/demo_imports.dart';
 // MyHomePage is a StatefulWidget which can maintain state that can change over time
 class MyHomePage extends StatefulWidget {
   @override
@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           tabs: const [ // The list of tabs
             Tab(icon: Icon(Icons.home), text: 'Home'), // Each Tab is a single tab in the TabBar
             Tab(icon: Icon(Icons.find_in_page), text: "How To"),
-            Tab(icon: Icon(Icons.menu), text: 'More'),
+            Tab(icon: Icon(Icons.cloud), text: 'Weather'),
           ],
         ),
       ),
@@ -43,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           HomeScreen(), // Each child is a single tab view in the TabBarView
           SimpleScreen(title: 'how to', text_1: 'This is how to do stuff', text_2: "We Hoped you enjouyed the video", video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
           // Center(child: Text("You are in How To")),
-          Center(child: Text("you are in More")),
+
+          DemoApiListScreen(),
         ],
       ),
     );

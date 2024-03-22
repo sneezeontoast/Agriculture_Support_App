@@ -5,7 +5,7 @@ import 'demo_imports.dart';
 
 
 
-// the reason why there is a gap between video and bottom text is it is in a seperate colum
+// the reason why there is a gap between video and bottom text is it is in a seperate column
 
 //import 'package:flutter_inappwebview-master'
 // The main function is the starting point for all Flutter app

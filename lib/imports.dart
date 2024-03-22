@@ -22,6 +22,7 @@ export 'package:chewie/chewie.dart';
 //----------------------------------------------------------------------
 
 export 'screens/home_screen.dart'; //home screen
+export 'screens/old_home_screen.dart'; //home screen
 
 //----------------------------------------------------------------------
 //export video player

@@ -12,6 +12,7 @@ class DemoStaticData {
       "image": "https://via.placeholder.com/150",
       "title": "Item 2",
       "details": "Details about Item 2"
+      
     }
 ]''';
 
