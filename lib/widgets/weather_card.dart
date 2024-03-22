@@ -14,21 +14,21 @@ class _WeatherCardState extends State<WeatherCard> {
   
   Widget build(BuildContext context) {
 
-    if ( widget.weather[0]['weather'].toString() == 'sunny_and_rainy') {
+    if ( widget.weather[1]['weather'].toString() == 'sunny_and_rainy') {
       weather = "Sunny And Rainy";
-    } else if ( widget.weather[0]['weather'].toString() == 'rainy') {
+    } else if ( widget.weather[1]['weather'].toString() == 'rainy') {
       weather = "Rainy";
-    } else if ( widget.weather[0]['weather'].toString() == 'sunny_and_cloudy') {
+    } else if ( widget.weather[1]['weather'].toString() == 'sunny_and_cloudy') {
       weather = "Sunny And Cloudy";
-    } else if ( widget.weather[0]['weather'].toString() == 'cyclone') {
+    } else if ( widget.weather[1]['weather'].toString() == 'cyclone') {
       weather = "Cyclone";
-    } else if ( widget.weather[0]['weather'].toString() == 'rainy_and_cloudy') {
+    } else if ( widget.weather[1]['weather'].toString() == 'rainy_and_cloudy') {
       weather = "Rainy And Cloudy";
-    } else if ( widget.weather[0]['weather'].toString() == 'sunny_and_windy') {
+    } else if ( widget.weather[1]['weather'].toString() == 'sunny_and_windy') {
       weather = "Sunny And Windy";
-    } else if ( widget.weather[0]['weather'].toString() == 'windy') {
+    } else if ( widget.weather[1]['weather'].toString() == 'windy') {
       weather = "Windy";
-    } else if ( widget.weather[0]['weather'].toString() == 'sunny_and_cloudy') {
+    } else if ( widget.weather[1]['weather'].toString() == 'sunny_and_cloudy') {
       weather = "Sunny And Cloudy";
     }
     return Center(
@@ -45,7 +45,7 @@ class _WeatherCardState extends State<WeatherCard> {
             Expanded(
                 child: ListTile(
               leading:
-                  Image.asset("lib/assets/${widget.weather[0]['weather']}.png"),
+                  Image.asset("lib/assets/${widget.weather[1]['weather']}.png"),
               // Ink.image(
               //   width: double.infinity,
               //   height: 300,
@@ -58,10 +58,19 @@ class _WeatherCardState extends State<WeatherCard> {
               subtitle: Expanded(
                 child: Column(
                   children: [
-
-                    Text("temperature ${widget.weather[1]['temperature']}"),
                     Text(
-                        "rainfall over last week ${widget.weather[2]['rainfall']}")
+                        "hello ${widget.weather[0]['long_description']}",
+                        style: Theme.of(context).textTheme.bodySmall
+                    ),
+                    Text(
+                      "temperature ${widget.weather[2]['temperature']}",
+                        style: Theme.of(context).textTheme.bodySmall
+                    ),
+                    Text(
+                        "rainfall over last week ${widget.weather[3]['rainfall']}",
+                        style: Theme.of(context).textTheme.bodySmall
+                    )
+
                   ],
                 ),
               ),

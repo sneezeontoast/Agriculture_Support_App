@@ -16,7 +16,8 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
     HomeScreen(),
     ListVerticalWidget(data_class: HomeStaticData()),
 
-    Text(findWeather((100, 100, 100, 100))),
+    // Text("hello"), // findWeather((100, 100, 100, 100))
+    Text(findWeather([100, 100, 100, 100])),
     // Text("Add The weather forecast here we maybe should change the icon to the current weather"),
     WeatherScreen(),
     HowToScreen(),
