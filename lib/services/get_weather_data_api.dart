@@ -44,7 +44,7 @@ class DemoDataApiService {
         //print(jsonResponse);
         Map<String, dynamic> dailyUnits = jsonResponse['daily_units'];
         Map<String, dynamic> dailyMeasurements =
-            jsonResponse['daily']; // daily is a map of measurement lists
+        jsonResponse['daily']; // daily is a map of measurement lists
 
         return dailyMeasurements;
       } else {

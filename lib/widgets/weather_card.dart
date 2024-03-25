@@ -1,8 +1,13 @@
 import '../imports.dart';
 
 class WeatherCard extends StatefulWidget {
-  final List weather;
-  const WeatherCard({super.key, required this.weather});
+  final int max_height;
+  final int max_width;
+
+  final int day;
+
+
+  const WeatherCard({super.key, required this.max_height, required this.max_width, required this.day});
 
   @override
   State<WeatherCard> createState() => _WeatherCardState();
@@ -13,7 +18,7 @@ class _WeatherCardState extends State<WeatherCard> {
   @override
   
   Widget build(BuildContext context) {
-
+/*
     if ( widget.weather[1]['weather'].toString() == 'sunny_and_rainy') {
       weather = "Sunny And Rainy";
     } else if ( widget.weather[1]['weather'].toString() == 'rainy') {
@@ -31,10 +36,14 @@ class _WeatherCardState extends State<WeatherCard> {
     } else if ( widget.weather[1]['weather'].toString() == 'sunny_and_cloudy') {
       weather = "Sunny And Cloudy";
     }
+
+ */
     return Center(
         child: ConstrainedBox(
       constraints: const BoxConstraints(
         maxHeight: 200,
+        maxWidth: 400,
+
       ),
       child: Card(
         margin: const EdgeInsets.all(20),
@@ -44,8 +53,8 @@ class _WeatherCardState extends State<WeatherCard> {
             // Text("weather: " + widget.weather.toString()),
             Expanded(
                 child: ListTile(
-              leading:
-                  Image.asset("lib/assets/${widget.weather[1]['weather']}.png"),
+              leading: GetWeatherText(long_or_quick_l_or_q: 'i', day: widget.day),
+                  // GetWeatherText(long_or_quick_l_or_q: 'i', day: widget.weather[5]['day'],),
               // Ink.image(
               //   width: double.infinity,
               //   height: 300,
@@ -54,25 +63,23 @@ class _WeatherCardState extends State<WeatherCard> {
               // ),
 
               // leading: Image.asset("asset/" + weather[0]['weather'] + ".png"),
-              title: Text(weather),
+              title: GetWeatherText(long_or_quick_l_or_q: 'q', day: widget.day),
               subtitle: Expanded(
-                child: Column(
-                  children: [
-                    Text(
-                        "hello ${widget.weather[0]['long_description']}",
-                        style: Theme.of(context).textTheme.bodySmall
-                    ),
-                    Text(
-                      "temperature ${widget.weather[2]['temperature']}",
-                        style: Theme.of(context).textTheme.bodySmall
-                    ),
-                    Text(
-                        "rainfall over last week ${widget.weather[3]['rainfall']}",
-                        style: Theme.of(context).textTheme.bodySmall
-                    )
+                child: Center(
+                  child: Column(
+                    children: [
 
-                  ],
-                ),
+                      GetWeatherText(long_or_quick_l_or_q: 't', day: widget.day),
+                      GetWeatherText(long_or_quick_l_or_q: 'r', day: widget.day),
+                      GetWeatherText(long_or_quick_l_or_q: 'w_s', day: widget.day),
+
+
+
+
+                    ],
+                  ),
+                )
+
               ),
             )),
           ],

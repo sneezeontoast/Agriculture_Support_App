@@ -35,7 +35,7 @@ const BodyMediumTextStyle = TextStyle(
 const BodySmallTextStyle = TextStyle(
   fontFamily: FontNameDefault,
   fontWeight: FontWeight.w300,
-  fontSize: 20.0,
+  fontSize: 16.0,
   color: Colors.black,
 );
 

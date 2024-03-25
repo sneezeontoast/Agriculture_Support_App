@@ -1,4 +1,5 @@
-import 'package:agriculture_support_app/data/home_data.dart';
+
+
 
 import '../imports.dart';
 
@@ -15,9 +16,10 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
   final pages = [
     HomeScreen(),
     ListVerticalWidget(data_class: HomeStaticData()),
-
-    // Text("hello"), // findWeather((100, 100, 100, 100))
-    Text(findWeather([100, 100, 100, 100])),
+    // GetWeatherDataType(),
+    // GetWeatherText(long_or_quick_l_or_q: 't', day: widget.weather[0]['day'],),
+    Text([0.2, 1.7, 2.9].toString()), // findWeather((100, 100, 100, 100))
+    // Text('${getWeatherData().toString()} '),
     // Text("Add The weather forecast here we maybe should change the icon to the current weather"),
     WeatherScreen(),
     HowToScreen(),
@@ -31,7 +33,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-   /*   appBar: AppBar(
+      appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [Colors.green, Theme.of(context).primaryColor]),
@@ -56,7 +58,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
         ],
 
         title: Text(
-          "Agriculture Suport App",
+          "Agriculture Suport App ",
           style: TextStyle(
             color: Colors.white,
             fontSize: 25,
@@ -66,7 +68,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
         backgroundColor: Theme.of(context).primaryColor,
       ),
 
-    */
+
       body: pages[pageIndex],
       bottomNavigationBar: Container(
         height: 60,

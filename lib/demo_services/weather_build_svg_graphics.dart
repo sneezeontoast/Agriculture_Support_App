@@ -21,7 +21,7 @@ const int containerWidth = 1000;
 const int LabelStepsY = 5;
 
 Future<String> getSvgString() async {
-  List weatherData = await getWeatherData();
+  List weatherData = await getWeatherDataD();
   List<String> dates = weatherData[0];
   List<double> tempsMax = weatherData[1];
   List<double> tempsMin = weatherData[2];

@@ -37,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text(
                 'Welcome',
                 style: TextStyle(
-                  fontFamily: 'PT_Serif',
                   fontSize: 50,
                   color: Colors.green,
                   //decoration: TextDecoration.underline,
@@ -66,16 +65,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   // ListVerticalWidget(data_class: HomeStaticData()),
                   //Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
                   Text('To The Agriculture Support App',
-                      style: Theme.of(context).textTheme.titleLarge,
-
-                      // TextStyle(
-                      //   fontFamily: 'PT_Serif',
-                      //   fontSize: 30,
-                      //   color: Colors.green,
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.green,
                         // decoration: TextDecoration.underline,
                         // fontWeight: FontWeight.bold,
-                      // ),
-                ),
+                      )),
                   // ListVerticalWidget(data_class: HomeStaticData()),
 
                   Expanded(
