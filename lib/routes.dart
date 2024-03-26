@@ -49,11 +49,12 @@ List screenData_3 = [
 
 ];
 var customRoutes = <String, WidgetBuilder>{
-  '/': (context) => BottomMainNavBar(),
-  '/demo_home': (context) => DemoHomeScreen(),
+  '/': (context) => const BottomMainNavBar(),
+  '/compost_intro': (context) => const CompostIntro(),
+  '/demo_home': (context) => const DemoHomeScreen(),
   '/dummy_screen': (context) => DummyScreen(),
-  '/course_home_screen': (context) => CompostOverveiw(),
-  '/compost_intro': (context) => CompostIntro(),
+  '/course_home_screen': (context) => const CompostOverveiw(),
+
   '/compost_course_stage_1': (context) => CourseTutorial(title: "Build A Compost Pile", stage: 1.toString(), screenData: screenData_1),
   '/compost_course_stage_2': (context) => CourseTutorial(title: "Looking After Compost", stage: 2.toString(), screenData: screenData_2),
   '/compost_course_stage_3': (context) => CourseTutorial(title: "Turning Your Compost", stage: 3.toString(), screenData: screenData_3)

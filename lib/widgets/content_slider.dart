@@ -16,25 +16,25 @@ class ContextSlider extends StatelessWidget {
                   // Your widgets here
                   Container(
                     color: Colors.red,
-                    padding: EdgeInsets.all(15.0),
-                    child: Column(
+                    padding: const EdgeInsets.all(15.0),
+                    child: const Column(
                       children: [
                         Text('Tip Of the day', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white),)
                       ],
                     ),
                   ),
-                  Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
+                  const Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
                   Container(color: Colors.blue,
-                    child: Center(
+                    child: const Center(
                       child: Text('Trust in the Lord with all your heart, and lean not on your own understanding. In all your ways, acknowledge Him, and He shall make your paths straight.'),
                     ),),
                   Container(color: Colors.green,
-                    child: Center(
+                    child: const Center(
                       child: Text('You should start composting!!'),
                     ),
                   ),
                 ],
-                switchDuration: Duration(seconds: 15), // Change this value to adjust auto-slide duration
+                switchDuration: const Duration(seconds: 15), // Change this value to adjust auto-slide duration
               ),
             );
             //Expanded(child: DemoListVerticalWidget()) // Vertical Listview from demo data JSON String

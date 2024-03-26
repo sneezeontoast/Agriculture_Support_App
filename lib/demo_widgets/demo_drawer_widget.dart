@@ -8,7 +8,7 @@ class DemoDrawerWidget extends StatelessWidget {
     return Container(
       width: 200.0,
       height: MediaQuery.of(context).size.height,
-      child: Column(
+      child: const Column(
         children: [
           SizedBox(height: 40.0,), // Space to push content to visible space
           Text('Menu')

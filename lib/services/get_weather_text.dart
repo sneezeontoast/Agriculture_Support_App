@@ -19,18 +19,18 @@ class GetWeatherText extends StatelessWidget {
         int date = 8 + day;
         print("weatherDataSnapshot.data.toString(): " +
             weatherDataSnapshot.data.toString());
-        widget = Text("error, error code 2");
+        widget = const Text("error, error code 2");
         if (weatherDataSnapshot.connectionState == ConnectionState.done) {
           if (long_or_quick_l_or_q == 'l') {
-            List _weatherForText = [
+            List weatherForText = [
               weatherDataSnapshot.data[0][date],
               weatherDataSnapshot.data[1][date],
               weatherDataSnapshot.data[2][date]
             ];
-            text = findWeather(_weatherForText).toString();
+            text = findWeather(weatherForText).toString();
           } else if (long_or_quick_l_or_q == 'q') {
-            String _weatherForText = weatherDataSnapshot.data[4][date].toString();
-            text = wwoToText(_weatherForText).toString();
+            String weatherForText = weatherDataSnapshot.data[4][date].toString();
+            text = wwoToText(weatherForText).toString();
             widget = Text(text.toString(),
                 style: Theme.of(context).textTheme.bodyMedium);
           } else if(long_or_quick_l_or_q == 't') {

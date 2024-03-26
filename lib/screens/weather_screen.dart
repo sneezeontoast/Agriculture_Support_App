@@ -1,5 +1,6 @@
 import '../imports.dart';
 
+
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
 
@@ -12,38 +13,39 @@ class _WeatherScreenState extends State<WeatherScreen> {
   List weather_today = [
     {'day': 0},
     {'max_height': 200},
-    {'max_width': 400}
+    {'max_width': 400},
+    {'day_text': 'Tommorow'}
 
   ];
 
   List weather_tommorow = [
     {'day': 1},
     {'max_height': 200},
-    {'max_width': 400}
+    {'max_width': 400},
+    {'day_text': 'Tommorow'}
 
   ];
+
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Weather"),
+        title: const Text("Weather"),
       ),
       body: ListView(
         children: <Widget>[
           Center(
             child: Column(
               children: [
-                Text("Today"),
                 WeatherCard(max_height: 200, max_width: MediaQuery.of(context).size.width.round() - 16, day: 0),
-                Text("Tommorow"),
                 WeatherCard(max_height: 200, max_width: MediaQuery.of(context).size.width.round() - 16, day: 1),
-                Text("this week"),
+                const Text("This Week:"),
               ],
             ),
           ),
-          SafeArea(
+          const SafeArea(
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(

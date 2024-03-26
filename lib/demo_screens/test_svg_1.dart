@@ -19,10 +19,10 @@ void main() async {
     MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Weather Data"),
+            title: const Text("Weather Data"),
           ),
           body: Column(children: [
-            Text('14-day Forecast'),
+            const Text('14-day Forecast'),
             SvgPicture.string(svgInputString),
 
             // width: 200,

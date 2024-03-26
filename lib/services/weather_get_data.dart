@@ -29,16 +29,16 @@ getWeatherData() async {
   print("hello");
   //print(dailyMeasurements);
   List<String> dates = List<String>.from(dailyMeasurements['time']);
-  List<double> temps_max = List<double>.from(dailyMeasurements['temperature_2m_max']);
-  List<double> temps_min = List<double>.from(dailyMeasurements['temperature_2m_min']);
-  List<double> temps_avg = List<double>.from(dailyMeasurements['temperature_2m_mean']);
-  List<double> wind_speed_10m_max = List<double>.from(dailyMeasurements['wind_speed_10m_max']);
-  List<double> precipitation_sum = List<double>.from(dailyMeasurements['precipitation_sum']);
-  List<double> sunshine_duration = List<double>.from(dailyMeasurements['sunshine_duration']);
-  List<int> weather_code = List<int>.from(dailyMeasurements['weather_code']);
+  List<double> tempsMax = List<double>.from(dailyMeasurements['temperature_2m_max']);
+  List<double> tempsMin = List<double>.from(dailyMeasurements['temperature_2m_min']);
+  List<double> tempsAvg = List<double>.from(dailyMeasurements['temperature_2m_mean']);
+  List<double> windSpeed10mMax = List<double>.from(dailyMeasurements['wind_speed_10m_max']);
+  List<double> precipitationSum = List<double>.from(dailyMeasurements['precipitation_sum']);
+  List<double> sunshineDuration = List<double>.from(dailyMeasurements['sunshine_duration']);
+  List<int> weatherCode = List<int>.from(dailyMeasurements['weather_code']);
   // List<double> weather_code = List<double>.from(dailyMeasurements['weather_code']);
 
-  weatherData = [dates, precipitation_sum, temps_avg, wind_speed_10m_max, weather_code];
+  weatherData = [dates, precipitationSum, tempsAvg, windSpeed10mMax, weatherCode];
   // List weatherForText = [weatherData[0][8], weatherData[1][8], weatherData[2][8]];
   /* print(dates);
   print(temps_max);

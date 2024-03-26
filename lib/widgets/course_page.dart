@@ -24,7 +24,7 @@ class CourseScreen extends StatelessWidget {
           Text(para_1),
           Video_Player(video_link: video_link),
           Text(para_2),
-          CheckBox(),
+          const CheckBox(),
           // Video_Player(video_link: video_link)
       ],
       )

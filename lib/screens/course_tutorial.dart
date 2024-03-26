@@ -16,7 +16,7 @@ class CourseTutorial extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 27,
 
           ),
@@ -25,7 +25,7 @@ class CourseTutorial extends StatelessWidget {
         actions: <Widget>[
           Text(
             stage,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
             ),
           )
@@ -38,19 +38,19 @@ class CourseTutorial extends StatelessWidget {
             var item = screenData[index]; // Covert item from raw list item
             // ListTile is a default widget in flutter. You can create your own widget for this
             if (item['type'] == "title") {
-              return Text(item['content'], style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold));
+              return Text(item['content'], style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold));
             } else if (item['type'] == "subtitle") {
               return Padding(
-                  padding: EdgeInsets.all(17.9),
-                      child: Text(item['content'], style: TextStyle(fontSize: 24.0))
+                  padding: const EdgeInsets.all(17.9),
+                      child: Text(item['content'], style: const TextStyle(fontSize: 24.0))
               );
 
             } else if (item['type'] == "quote") {
               return Text(item['content'],
                   style:
-                  TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic));
+                  const TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic));
             } else if (item['type'] == "tracker") {
-              return CourseScroll();
+              return const CourseScroll();
             }
             else if (item['type'] == "video") {
               return Padding(
@@ -67,9 +67,9 @@ class CourseTutorial extends StatelessWidget {
             }
             else if (item['type'] == "text") {
               return Padding(
-                padding: EdgeInsets.all(18.0),
+                padding: const EdgeInsets.all(18.0),
                 child: Text(item['content'],
-                  style: TextStyle(fontSize: 14.0
+                  style: const TextStyle(fontSize: 14.0
 
                   ),
                 ),
@@ -78,7 +78,7 @@ class CourseTutorial extends StatelessWidget {
               return Center(
                 child: Text(
                   "\u2022" + item['content'],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17.5,
 
@@ -86,7 +86,7 @@ class CourseTutorial extends StatelessWidget {
                 )
               );
             } else {
-              return Text(" ");
+              return const Text(" ");
             }
           })
 

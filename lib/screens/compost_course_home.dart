@@ -13,13 +13,13 @@ class CompostOverveiw extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(8),
         children: <Widget> [
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(19.0),
             child: Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
           ),
 
 
-         Padding(padding: EdgeInsets.all(20.0),
+         Padding(padding: const EdgeInsets.all(20.0),
               child:
               Text('Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.', style: Theme.of(context).textTheme.bodyMedium
 
@@ -47,7 +47,7 @@ class CompostOverveiw extends StatelessWidget {
           //   child: CourseScroll(),
           // ),
 
-          SizedBox(
+          const SizedBox(
             height: 100,
             child: CourseScroll(),
           ),

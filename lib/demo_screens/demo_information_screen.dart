@@ -42,15 +42,15 @@ class DemoInformationScreen extends StatelessWidget {
               var item = screenData[index]; // Covert item from raw list item
               // ListTile is a default widget in flutter. You can create your own widget for this
               if (item['type'] == "title") {
-                return Text(item['content'], style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold));
+                return Text(item['content'], style: const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold));
               } else if (item['type'] == "subtitle") {
-                return Text(item['content'], style: TextStyle(fontSize: 17.0));
+                return Text(item['content'], style: const TextStyle(fontSize: 17.0));
               } else if (item['type'] == "quote") {
                 return Text(item['content'],
                     style:
-                        TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic));
+                        const TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic));
               } else if (item['type'] == "tracker") {
-                return DemoCourseTracker();
+                return const DemoCourseTracker();
               }
               else if (item['type'] == "video") {
                 return Padding(
@@ -64,7 +64,7 @@ class DemoInformationScreen extends StatelessWidget {
                   ),
                 );
               } else {
-                return Text("");
+                return const Text("");
               }
             }));
   }

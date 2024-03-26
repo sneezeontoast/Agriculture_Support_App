@@ -44,7 +44,7 @@ class _ListVerticalWidgetState extends State<ListVerticalWidget> {
             // ListTile is a default widget in flutter. You can create your own widget for this
             return ListTile(
               leading: item.image.isNotEmpty
-                  ? Icon(
+                  ? const Icon(
                 Icons.photo,
                 size: 50.0,
                 color: Colors.green,

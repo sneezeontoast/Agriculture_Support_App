@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Gfg TextButton Demo"),
+        title: const Text("Gfg TextButton Demo"),
       ),
       body: Center(
         child: Column(
@@ -40,16 +40,16 @@ class Home extends StatelessWidget {
                   "https://media.geeksforgeeks.org/wp-content/uploads/20220112153639/gfglogo-300x152.png"),
             ),
             TextButton(
-              child: Text(
+              child: const Text(
                 "Visit GeeksforGeeks",
                 style: TextStyle(fontSize: 25),
               ),
               onPressed: () async {
-                const String _url = "https://www.geeksforgeeks.org";
-                if (await canLaunch(_url)) {
-                  launch(_url);
+                const String url = "https://www.geeksforgeeks.org";
+                if (await canLaunch(url)) {
+                  launch(url);
                 } else {
-                  throw "Could not launch $_url";
+                  throw "Could not launch $url";
                 }
               },
             )

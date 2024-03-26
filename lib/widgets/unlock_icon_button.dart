@@ -14,7 +14,7 @@ class UnlockButton extends StatefulWidget {
 
 class _UnlockButtonState extends State<UnlockButton> {
 
-  var myIcon = Icon(Icons.lock);
+  var myIcon = const Icon(Icons.lock);
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +29,12 @@ class _UnlockButtonState extends State<UnlockButton> {
                 width: 90,
                 height: 90,
                 child: widget.myIconUnlocked
-                    ? myIcon = Icon(Icons.lock_open) // ask chris why this didnt work
-                    : myIcon = Icon(Icons.lock)),
+                    ? myIcon = const Icon(Icons.lock_open) // ask chris why this didnt work
+                    : myIcon = const Icon(Icons.lock)),
 
             Text(
               "stage " + widget.title,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ],
         ),

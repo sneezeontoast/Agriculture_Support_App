@@ -14,15 +14,16 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
   int pageIndex = 0;
 
   final pages = [
-    HomeScreen(),
+    const HomeScreen(),
     ListVerticalWidget(data_class: HomeStaticData()),
+    const HomeScreen2(),
     // GetWeatherDataType(),
     // GetWeatherText(long_or_quick_l_or_q: 't', day: widget.weather[0]['day'],),
-    Text([0.2, 1.7, 2.9].toString()), // findWeather((100, 100, 100, 100))
+    // Text([0.2, 1.7, 2.9].toString()), // findWeather((100, 100, 100, 100))
     // Text('${getWeatherData().toString()} '),
     // Text("Add The weather forecast here we maybe should change the icon to the current weather"),
-    WeatherScreen(),
-    HowToScreen(),
+    const WeatherScreen(),
+    const HowToScreen(),
 
     // Text("information this might not be needed")
 
@@ -48,7 +49,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
           // ],
           // onChanged: onChanged
           // ),
-          Padding(
+          const Padding(
             child: Icon(
               Icons.menu,
                 color: Colors.white,
@@ -57,7 +58,7 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
 
         ],
 
-        title: Text(
+        title: const Text(
           "Agriculture Suport App ",
           style: TextStyle(
             color: Colors.white,
@@ -67,6 +68,8 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
         ),
         backgroundColor: Theme.of(context).primaryColor,
       ),
+
+
 
 
       body: pages[pageIndex],

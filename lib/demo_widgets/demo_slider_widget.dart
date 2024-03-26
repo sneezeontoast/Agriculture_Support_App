@@ -118,7 +118,7 @@ class _DemoSliderWidgetState extends State<DemoSliderWidget> {
             Expanded(
               child: Card(
                 elevation: 5.0,
-                margin: EdgeInsets.symmetric(horizontal: cardMarginHorizontal),
+                margin: const EdgeInsets.symmetric(horizontal: cardMarginHorizontal),
                 child: PageView(
                   controller: _pageController,
                   onPageChanged: (int index) {
@@ -158,7 +158,7 @@ class _DemoSliderWidgetState extends State<DemoSliderWidget> {
           bottom: 0,
           left: cardMarginHorizontal - iconGap, // Correct the position for left arrow
           child: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
+            icon: const Icon(Icons.arrow_back_ios),
             onPressed: _goToPrevious,
           ),
         ),
@@ -167,7 +167,7 @@ class _DemoSliderWidgetState extends State<DemoSliderWidget> {
           bottom: 0,
           right: cardMarginHorizontal - (iconGap+5), // Correct the position for right arrow
           child: IconButton(
-            icon: Icon(Icons.arrow_forward_ios),
+            icon: const Icon(Icons.arrow_forward_ios),
             onPressed: _goToNext,
           ),
         ),

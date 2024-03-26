@@ -10,22 +10,22 @@ class CompostIntro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('How To Compost'),
+        title: const Text('How To Compost'),
       ),
       body: ListView(
 
         children: <Widget> [
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(19.0),
             child: Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
           ),
 
 
           Padding(
-              padding: EdgeInsets.only(left: 170.0, right: 19.0),
+              padding: const EdgeInsets.only(left: 170.0, right: 19.0),
             child:
               ElevatedButton(
-                child: Text('Do a composting course'),
+                child: const Text('Do a composting course'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/course_home_screen');
                 },
@@ -34,7 +34,7 @@ class CompostIntro extends StatelessWidget {
           ),
 
 
-          Padding(padding: EdgeInsets.all(20.0),
+          const Padding(padding: EdgeInsets.all(20.0),
             child:
                 Text('Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.',
                     // textAlign: TextAlign.center

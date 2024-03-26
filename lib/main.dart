@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
       title:
           'Agricultural Support App!', // The title that Android shows for your app
       theme: ThemeData(
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           titleMedium: TitleTextStyle,
           bodySmall: BodySmallTextStyle,
           bodyLarge: BodyLargeTextStyle,

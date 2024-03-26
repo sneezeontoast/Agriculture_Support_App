@@ -21,14 +21,14 @@ class DemoHomeScreen extends StatelessWidget {
         title: Text('Demo Home', style: Theme.of(context).textTheme.bodyMedium), // Title in App Bar on the screen
         // Add a button on the left hand side to show the menu button
         leading: IconButton(
-          icon: Icon(Icons.menu), // Icon in left side of AppBar
+          icon: const Icon(Icons.menu), // Icon in left side of AppBar
           onPressed: (){
             Scaffold.of(context).openDrawer(); // Opens Drawer
           },),
         // actions allows buttons or icons to be added to right side of menu
         actions: [
           IconButton(
-            icon: Icon(Icons.help),
+            icon: const Icon(Icons.help),
             onPressed: (){
               // Add functionality to access help
             },
@@ -40,7 +40,7 @@ class DemoHomeScreen extends StatelessWidget {
       // You can add the drawer before or after the body. The menu could be
       // created as a seperate widget and imported and used for easier code
       // to read
-      drawer: DemoDrawerWidget(),
+      drawer: const DemoDrawerWidget(),
       body: Padding(
         padding: const EdgeInsets.all(15.0), // Provide padding around the page content
         child: Column(
@@ -53,24 +53,24 @@ class DemoHomeScreen extends StatelessWidget {
                   // Your widgets here
                   Container(
                     color: Colors.red,
-                    padding: EdgeInsets.all(15.0),
-                  child: Column(
+                    padding: const EdgeInsets.all(15.0),
+                  child: const Column(
                     children: [
                       Text('Container 1', style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white),)
                     ],
                   ),
                   ),
-                  Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
+                  const Video_Player(video_link: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
                   Container(color: Colors.blue,
-                  child: Center(
+                  child: const Center(
                     child: Text('Trust in the Lord with all your heart, and lean not on your own understanding. In all your ways, acknowledge Him, and He shall make your paths straight.'),
                   ),),
                   Container(color: Colors.green),
                 ],
-                switchDuration: Duration(seconds: 15), // Change this value to adjust auto-slide duration
+                switchDuration: const Duration(seconds: 15), // Change this value to adjust auto-slide duration
               ),
             ),
-            Expanded(child: DemoListVerticalWidget()) // Vertical Listview from demo data JSON String
+            const Expanded(child: DemoListVerticalWidget()) // Vertical Listview from demo data JSON String
           ],
         ),
       ),

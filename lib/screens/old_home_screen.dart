@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       body: TabBarView( // TabBarView is a page view that displays the widget which corresponds to the currently selected tab
         controller: _tabController, // The TabController for the TabBarView
         children: [ // The list of widgets that are displayed when a tab is selected
-          HomeScreen(), // Each child is a single tab view in the TabBarView
+          const HomeScreen(), // Each child is a single tab view in the TabBarView
           // Center(child: Text("You are in How To")),
           // Center(child: Text("you are in More")),
           // DemoListHorizontalWidget()

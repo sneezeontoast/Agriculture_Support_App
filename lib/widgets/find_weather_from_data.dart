@@ -133,8 +133,8 @@ String findGoodOrBad(int percent, dictionary) {
 
 String findNearestValue(value, data) {
   var values = data.where((x) => x <= value).map((x) => x).toList();
-  var nearest_value = values.sort();
-  return data[nearest_value.last];
+  var nearestValue = values.sort();
+  return data[nearestValue.last];
 
 }
 
@@ -146,66 +146,66 @@ String wwoToText(wwo) {
 
 }
 
-String findWeatherC(weather_mesurement) {
-  var weathers = [['rainfall ', weather_mesurement[0]], ['cloud cover ', weather_mesurement[1]], ['temperature ', weather_mesurement[2]], ['wind speed ', weather_mesurement[3]]];
+String findWeatherC(weatherMesurement) {
+  var weathers = [['rainfall ', weatherMesurement[0]], ['cloud cover ', weatherMesurement[1]], ['temperature ', weatherMesurement[2]], ['wind speed ', weatherMesurement[3]]];
 
-  var top_weather = 'no weather info';
-  var weather_text = 'nothing';
-  var top_weather_value = 0;
-  bool dose_not_work = true;
+  var topWeather = 'no weather info';
+  var weatherText = 'nothing';
+  var topWeatherValue = 0;
+  bool doseNotWork = true;
   int thresh = 90;
   // var rainy = ('rainy ', weather_mesurement[0]);
   // var cloudy = ('cloudy ', weather_mesurement[1]);
   // var sunny = ('sunny ', weather_mesurement[2]);
   // var windy = ('windy ', weather_mesurement[3]);
-  List rainy = ['rainy ', weather_mesurement[0]];
-  List cloudy = ['cloudy ', weather_mesurement[1]];
-  List sunny = ['sunny ', weather_mesurement[2]];
-  List windy = ['windy ', weather_mesurement[3]];
-  List best_weathers = [rainy, cloudy];
+  List rainy = ['rainy ', weatherMesurement[0]];
+  List cloudy = ['cloudy ', weatherMesurement[1]];
+  List sunny = ['sunny ', weatherMesurement[2]];
+  List windy = ['windy ', weatherMesurement[3]];
+  List bestWeathers = [rainy, cloudy];
 
   List range_3 = [0, 1, 2];
-  while(dose_not_work) {
+  while(doseNotWork) {
     for(int i in range_3) {
-      weather_text = weather_text_convert[i] ?? "nothing found error 0";
-      if(weather_mesurement[i] >= thresh && weather_mesurement[i] >= top_weather_value) {
-        top_weather_value = weather_mesurement[i];
-        top_weather = weather_text;
+      weatherText = weather_text_convert[i] ?? "nothing found error 0";
+      if(weatherMesurement[i] >= thresh && weatherMesurement[i] >= topWeatherValue) {
+        topWeatherValue = weatherMesurement[i];
+        topWeather = weatherText;
       }
     }
 
-    if( weather_mesurement[0] + weather_mesurement[1] >= thresh ) {
-      best_weathers = [rainy, cloudy];
-      dose_not_work = false;
+    if( weatherMesurement[0] + weatherMesurement[1] >= thresh ) {
+      bestWeathers = [rainy, cloudy];
+      doseNotWork = false;
     }
-    if( weather_mesurement[0] + weather_mesurement[2] >= thresh ) {
-      best_weathers = [rainy, sunny];
-      dose_not_work = false;
+    if( weatherMesurement[0] + weatherMesurement[2] >= thresh ) {
+      bestWeathers = [rainy, sunny];
+      doseNotWork = false;
     }
-    if( weather_mesurement[0] + weather_mesurement[3] >= thresh ) {
-      best_weathers = [rainy, windy];
-      dose_not_work = false;
+    if( weatherMesurement[0] + weatherMesurement[3] >= thresh ) {
+      bestWeathers = [rainy, windy];
+      doseNotWork = false;
     }
-    if( weather_mesurement[1] + weather_mesurement[2] >= thresh ) {
-      best_weathers = [cloudy, sunny];
-      dose_not_work = false;
+    if( weatherMesurement[1] + weatherMesurement[2] >= thresh ) {
+      bestWeathers = [cloudy, sunny];
+      doseNotWork = false;
     }
-    if( weather_mesurement[1] + weather_mesurement[3] >= thresh ) {
-      best_weathers = [cloudy, windy];
-      dose_not_work = false;
+    if( weatherMesurement[1] + weatherMesurement[3] >= thresh ) {
+      bestWeathers = [cloudy, windy];
+      doseNotWork = false;
     }
-    if( weather_mesurement[2] + weather_mesurement[3] >= thresh ) {
-      best_weathers = [sunny, windy];
-      dose_not_work = false;
+    if( weatherMesurement[2] + weatherMesurement[3] >= thresh ) {
+      bestWeathers = [sunny, windy];
+      doseNotWork = false;
     }
     thresh -= 10;
   }
-  var quick_description = findGoodOrBad(best_weathers[0][1], other_good_bad_thresholds) +
-      best_weathers[0][0] +
+  var quickDescription = findGoodOrBad(bestWeathers[0][1], other_good_bad_thresholds) +
+      bestWeathers[0][0] +
       " and " +
-      findGoodOrBad(best_weathers[1][1], other_good_bad_thresholds) +
-      best_weathers[1][0];
-  var long_description = (findGoodOrBad(weathers[0][1], good_bad_thresholds) +
+      findGoodOrBad(bestWeathers[1][1], other_good_bad_thresholds) +
+      bestWeathers[1][0];
+  var longDescription = (findGoodOrBad(weathers[0][1], good_bad_thresholds) +
       weathers[0][0] +
       "with " +
       findGoodOrBad(weathers[1][1], good_bad_thresholds) +
@@ -218,35 +218,35 @@ String findWeatherC(weather_mesurement) {
   //     "and " +
   //     findGoodOrBad(best_weathers.item3.item2, other_good_bad_thresholds) +
   //     best_weathers.item3.item1;
-  return long_description;
+  return longDescription;
 }
  // https://api.open-meteo.com/v1/forecast?latitude=15.88&longitude=35&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,apparent_temperature,precipitation_probability,rain,cloud_cover,wind_speed_10m,soil_moisture_9_to_27cm&daily=rain_sum&timezone=Africa%2FCairo
 
-String findWeather(weather_mesurement) {
-  var weathers = [['rainfall ', weather_mesurement[0]], ['temperature ', weather_mesurement[2]], ['wind speed ', weather_mesurement[3]]];
+String findWeather(weatherMesurement) {
+  var weathers = [['rainfall ', weatherMesurement[0]], ['temperature ', weatherMesurement[2]], ['wind speed ', weatherMesurement[3]]];
 
-  var top_weather = 'no weather info';
-  var weather_text = 'nothing';
-  var top_weather_value = 0;
-  bool dose_not_work = true;
+  var topWeather = 'no weather info';
+  var weatherText = 'nothing';
+  var topWeatherValue = 0;
+  bool doseNotWork = true;
   int thresh = 90;
   // var rainy = ('rainy ', weather_mesurement[0]);
   // var cloudy = ('cloudy ', weather_mesurement[1]);
   // var sunny = ('sunny ', weather_mesurement[2]);
   // var windy = ('windy ', weather_mesurement[3]);
-  List rainy = ['rainy ', weather_mesurement[0]];
-  List cloudy = ['cloudy ', weather_mesurement[1]];
-  List sunny = ['sunny ', weather_mesurement[2]];
-  List windy = ['windy ', weather_mesurement[3]];
-  List best_weathers = [rainy, cloudy];
+  List rainy = ['rainy ', weatherMesurement[0]];
+  List cloudy = ['cloudy ', weatherMesurement[1]];
+  List sunny = ['sunny ', weatherMesurement[2]];
+  List windy = ['windy ', weatherMesurement[3]];
+  List bestWeathers = [rainy, cloudy];
 
   List range_3 = [0, 1, 2];
-  while(dose_not_work) {
+  while(doseNotWork) {
     for(int i in range_3) {
-      weather_text = weather_text_convert[i] ?? "nothing found error 0";
-      if(weather_mesurement[i] >= thresh && weather_mesurement[i] >= top_weather_value) {
-        top_weather_value = weather_mesurement[i];
-        top_weather = weather_text;
+      weatherText = weather_text_convert[i] ?? "nothing found error 0";
+      if(weatherMesurement[i] >= thresh && weatherMesurement[i] >= topWeatherValue) {
+        topWeatherValue = weatherMesurement[i];
+        topWeather = weatherText;
       }
     }
 
@@ -254,13 +254,13 @@ String findWeather(weather_mesurement) {
     //   best_weathers = [rainy, cloudy];
     //   dose_not_work = false;
     // }
-    if( weather_mesurement[0] + weather_mesurement[1] >= thresh ) {
-      best_weathers = [rainy, sunny];
-      dose_not_work = false;
+    if( weatherMesurement[0] + weatherMesurement[1] >= thresh ) {
+      bestWeathers = [rainy, sunny];
+      doseNotWork = false;
     }
-    if( weather_mesurement[0] + weather_mesurement[2] >= thresh ) {
-      best_weathers = [rainy, windy];
-      dose_not_work = false;
+    if( weatherMesurement[0] + weatherMesurement[2] >= thresh ) {
+      bestWeathers = [rainy, windy];
+      doseNotWork = false;
     }
     /*
     if( weather_mesurement[1] + weather_mesurement[2] >= thresh ) {
@@ -273,18 +273,18 @@ String findWeather(weather_mesurement) {
     }
 
      */
-    if( weather_mesurement[1] + weather_mesurement[2] >= thresh ) {
-      best_weathers = [sunny, windy];
-      dose_not_work = false;
+    if( weatherMesurement[1] + weatherMesurement[2] >= thresh ) {
+      bestWeathers = [sunny, windy];
+      doseNotWork = false;
     }
     thresh -= 10;
   }
-  var quick_description = findGoodOrBad(best_weathers[0][1], other_good_bad_thresholds) +
-      best_weathers[0][0] +
+  var quickDescription = findGoodOrBad(bestWeathers[0][1], other_good_bad_thresholds) +
+      bestWeathers[0][0] +
       " and " +
-      findGoodOrBad(best_weathers[1][1], other_good_bad_thresholds) +
-      best_weathers[1][0];
-  var long_description = (findGoodOrBad(weathers[0][1], good_bad_thresholds) +
+      findGoodOrBad(bestWeathers[1][1], other_good_bad_thresholds) +
+      bestWeathers[1][0];
+  var longDescription = (findGoodOrBad(weathers[0][1], good_bad_thresholds) +
       weathers[0][0] +
       "with " +
       findGoodOrBad(weathers[1][1], good_bad_thresholds) +
@@ -297,5 +297,5 @@ String findWeather(weather_mesurement) {
   //     "and " +
   //     findGoodOrBad(best_weathers.item3.item2, other_good_bad_thresholds) +
   //     best_weathers.item3.item1;
-  return long_description;
+  return longDescription;
 }

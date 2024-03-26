@@ -36,7 +36,7 @@ class _DemoListVerticalWidgetState extends State<DemoListVerticalWidget> {
         DemoListItem item = DemoListItem.fromJson(rawList[index]); // Covert item from raw list item
        // ListTile is a default widget in flutter. You can create your own widget for this
         return ListTile(
-          leading: item.image.isNotEmpty ? Icon(Icons.photo, size: 50.0, color: Colors.green,) : null, // Only displays if image available
+          leading: item.image.isNotEmpty ? const Icon(Icons.photo, size: 50.0, color: Colors.green,) : null, // Only displays if image available
           title: Text(item.title),
           subtitle: Text(item.details),
           // route: Text(item.r),

@@ -48,7 +48,7 @@ class _DemoCourseTrackerState extends State<DemoCourseTracker> {
           width: 80.0,
           color: item['stage'+(index+1).toString()] == false?Colors.red:Colors.green,
           child: Center(
-            child: Text((index+1).toString(), style: TextStyle(fontSize: 30),),
+            child: Text((index+1).toString(), style: const TextStyle(fontSize: 30),),
           ),
         ),
       ),

@@ -29,14 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
           floating: false,
           pinned: true,
           flexibleSpace: FlexibleSpaceBar(
-            title: Text('Agriculture Support App'),
+            title: const Text('Agriculture Support App'),
             background: Image.asset(
               'lib/assets/tea.png',
               fit: BoxFit.cover,
             ),
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.only(bottom: 15.0),
           ),
@@ -44,12 +44,12 @@ class _HomeScreenState extends State<HomeScreen> {
         SliverToBoxAdapter(
           child: SizedBox(
             height: (MediaQuery.of(context).size.width / 16) * 10, // Adjust based on your context slider's height
-            child: ContextSlider(), // Assuming this is a widget that can be placed directly
+            child: const ContextSlider(), // Assuming this is a widget that can be placed directly
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Text(
               'To The Agriculture Support App',
               style: TextStyle(fontSize: 30, color: Colors.green),
@@ -59,8 +59,8 @@ class _HomeScreenState extends State<HomeScreen> {
         SliverList(
           delegate: SliverChildListDelegate([
             ListVerticalWidget(data_class: HomeStaticData()),
-            Padding(padding: EdgeInsets.all(17.0)),
-            Text(text_1, style: TextStyle(color: Colors.black)),
+            const Padding(padding: EdgeInsets.all(17.0)),
+            const Text(text_1, style: TextStyle(color: Colors.black)),
           ]),
         ),
       ],

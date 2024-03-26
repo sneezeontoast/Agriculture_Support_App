@@ -41,6 +41,7 @@ class _Video_PlayerState extends State<Video_Player> {
 
     });
   }
+  @override
   Widget build(BuildContext context) {
     return Container(
       width: 350,
@@ -49,7 +50,7 @@ class _Video_PlayerState extends State<Video_Player> {
 
        _videoPlayerController != null && _videoPlayerController.value.isInitialized? Chewie(
           controller: _chewieController
-          ,):Text(r"Loading... ¯\_(ツ)_/¯"),
+          ,):const Text(r"Loading... ¯\_(ツ)_/¯"),
     );
 
   }
