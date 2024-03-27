@@ -46,7 +46,8 @@ export 'widgets/list_vertical_widget.dart';
 export 'widgets/unlock_icon_button.dart';
 export 'widgets/course_scroll.dart';
 export 'widgets/weather_card.dart';
-export 'services/find_weather_from_data.dart';
+export 'widgets/weather_card_custom.dart';
+
 
 // data imports //
 export 'data/course_scroll_data_model.dart';
@@ -54,7 +55,8 @@ export 'data/course_scroll_data.dart';
 export 'package:agriculture_support_app/data/home_data.dart';
 
 // services
-export 'package:agriculture_support_app/services/get_weather_text.dart';
+export 'services/get_weather_text.dart';
+export 'services/find_weather_from_data.dart';
 
 
 

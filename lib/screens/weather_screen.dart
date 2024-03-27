@@ -49,6 +49,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           Center(
             child: Column(
               children: [
+                WeatherCardCustom(image:"lib/assets/wwo_73.png",title: 'Snowy Weather',),
          //       WeatherCard(max_height: 200, max_width: MediaQuery.of(context).size.width.round() - 16, day: 0),
          //       WeatherCard(max_height: 200, max_width: MediaQuery.of(context).size.width.round() - 16, day: 1),
                 const Text("This Week:"),
