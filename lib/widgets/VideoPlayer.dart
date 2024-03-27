@@ -11,54 +11,48 @@ class Video_Player extends StatefulWidget {
 }
 
 class _Video_PlayerState extends State<Video_Player> {
-
   late VideoPlayerController _videoPlayerController;
-  late ChewieController _chewieController;
+  ChewieController? _chewieController; // Make this nullable
 
   @override
   void initState() {
     super.initState();
-    _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(
-        widget.video_link))
+    _videoPlayerController = VideoPlayerController.network(widget.video_link)
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         _initialisePlayer();
       });
-
-
   }
-
 
   void _initialisePlayer() async {
+    // Ensure _videoPlayerController is initialized before using it
     await _videoPlayerController.initialize();
-    _chewieController = ChewieController(videoPlayerController:
-    _videoPlayerController,
-    autoPlay: false,
-      looping: false,
-
-    );
     setState(() {
-
+      // Initialize ChewieController here and set state to rebuild the widget
+      _chewieController = ChewieController(
+        videoPlayerController: _videoPlayerController,
+        autoPlay: false,
+        looping: false,
+      );
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 350,
       height: 200,
-      child:
-
-       _videoPlayerController != null && _videoPlayerController.value.isInitialized? Chewie(
-          controller: _chewieController
-          ,):const Text(r"Loading... ¯\_(ツ)_/¯"),
+      child: _chewieController != null && _videoPlayerController.value.isInitialized
+          ? Chewie(
+        controller: _chewieController!,
+      )
+          : const Text("Loading... ¯\\_(ツ)_/¯"),
     );
-
   }
 
   @override
   void dispose() {
     _videoPlayerController.dispose();
-    _chewieController.dispose();
+    _chewieController?.dispose(); // Use ?. since _chewieController is nullable
     super.dispose();
   }
 }
