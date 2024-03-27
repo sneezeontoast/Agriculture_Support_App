@@ -53,7 +53,11 @@ class _WeatherCardState extends State<WeatherCard> {
                 // Text("weather: " + widget.weather.toString()),
                 Expanded(
                     child: ListTile(
-                      leading: GetWeatherText(long_or_quick_l_or_q: 'i', day: widget.day),
+                      leading: Container(
+                          constraints: BoxConstraints(
+                            maxWidth: MediaQuery.of(context).size.width - 60
+                          ),
+                          child: GetWeatherText(long_or_quick_l_or_q: 'i', day: widget.day)),
                       // GetWeatherText(long_or_quick_l_or_q: 'i', day: widget.weather[5]['day'],),
                       // Ink.image(
                       //   width: double.infinity,

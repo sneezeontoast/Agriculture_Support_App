@@ -4,4 +4,4 @@
 * dont use expanded in widget
 * you cant navagate a parent widget through a widget runnnung in side another widget
 * NUll error means a widget being passed through is null
-* data base will update if requested so if bob queried 
+* data base will update if requested so if bob queried it would update database for what it queried 

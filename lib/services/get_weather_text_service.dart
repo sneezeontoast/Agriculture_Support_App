@@ -37,7 +37,7 @@ class GetWeatherTextService {
     } else {
       text = "error try reloading if this is your app check the uses of GetWeatherDataType and what long_or_quick_l_or_q is defined as long_or_quick_l_or_q $datatype not found error code 1";
     }
-  return text;
+    return text;
 
   }
 
