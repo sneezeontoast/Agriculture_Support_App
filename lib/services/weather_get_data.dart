@@ -20,6 +20,7 @@ getWeatherData() async {
       pastDays: 7,
       forecastDays: 14);
   //weatherData = data;
+
   Map<String, dynamic> dailyMeasurements = data;
   //print(weatherData.toString());
   //setState(() {});

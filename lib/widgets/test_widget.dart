@@ -1,8 +1,8 @@
 import '../imports.dart';
 
 class WeatherCard extends StatefulWidget {
-  final double max_height;
-  final double max_width;
+  final int max_height;
+  final int max_width;
 
   final int day;
 
@@ -40,9 +40,9 @@ class _WeatherCardState extends State<WeatherCard> {
  */
     return Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxHeight: widget.max_width,
-            maxWidth: widget.max_height,
+          constraints: const BoxConstraints(
+            maxHeight: 200,
+            maxWidth: 400,
 
           ),
           child: Card(
