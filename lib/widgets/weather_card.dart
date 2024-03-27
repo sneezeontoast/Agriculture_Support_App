@@ -64,8 +64,7 @@ class _WeatherCardState extends State<WeatherCard> {
 
                       // leading: Image.asset("asset/" + weather[0]['weather'] + ".png"),
                       title: GetWeatherText(long_or_quick_l_or_q: 'q', day: widget.day),
-                      subtitle: Expanded(
-                          child: Center(
+                      subtitle:  Center(
                             child: Column(
                               children: [
 
@@ -73,13 +72,8 @@ class _WeatherCardState extends State<WeatherCard> {
                                 GetWeatherText(long_or_quick_l_or_q: 'r', day: widget.day),
                                 GetWeatherText(long_or_quick_l_or_q: 'w_s', day: widget.day),
 
-
-
-
                               ],
                             ),
-                          )
-
                       ),
                     )),
               ],

@@ -1,7 +1,7 @@
 import 'package:agriculture_support_app/services/weather_get_data.dart';
 import 'package:flutter/material.dart';
 // import '../imports.dart';
-import 'package:agriculture_support_app/widgets/find_weather_from_data.dart';
+import 'package:agriculture_support_app/services/find_weather_from_data.dart';
 class GetWeatherText extends StatelessWidget {
   final String long_or_quick_l_or_q;
   final int day;
@@ -31,8 +31,7 @@ class GetWeatherText extends StatelessWidget {
           } else if (long_or_quick_l_or_q == 'q') {
             String weatherForText = weatherDataSnapshot.data[4][date].toString();
             text = wwoToText(weatherForText).toString();
-            widget = Text(text.toString(),
-                style: Theme.of(context).textTheme.bodyMedium);
+
           } else if(long_or_quick_l_or_q == 't') {
             text = 'Temperature: ${weatherDataSnapshot.data[2][date].toString()}°C';
             widget = Text(text.toString(),

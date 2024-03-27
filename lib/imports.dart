@@ -46,7 +46,7 @@ export 'widgets/list_vertical_widget.dart';
 export 'widgets/unlock_icon_button.dart';
 export 'widgets/course_scroll.dart';
 export 'widgets/weather_card.dart';
-export 'widgets/find_weather_from_data.dart';
+export 'services/find_weather_from_data.dart';
 
 // data imports //
 export 'data/course_scroll_data_model.dart';
