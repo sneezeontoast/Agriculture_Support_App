@@ -14,6 +14,28 @@ class WeatherCardCustom extends StatefulWidget {
 }
 
 class _WeatherCardCustomState extends State<WeatherCardCustom> {
+
+//  List variables = [i,l,q,r,t,w_s];
+ List variables = ["","","","","",""];
+
+
+  setData() async {
+    variables = await GetWeatherTextService().getWeatherText(widget.day);
+    setState(() {
+
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setData();
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -27,24 +49,23 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(GetWeatherTextService().getWeatherText('q', widget.day), style: Theme.of(context).textTheme.bodyLarge,),
+            Text(variables[2], style: Theme.of(context).textTheme.bodyLarge,),
             Row(
               children: [
-                // holder for img
+                // holder for imgx
                 Container(
                   width: (MediaQuery.of(context).size.width / 3) - 40,
-                  child: Image.asset(GetWeatherTextService().getWeatherText('i', widget.day)),
-                  
-                ),
+                  child: variables[0] == ""?Icon(Icons.cloud):Image.asset(variables[0])),
+
                 // text detail section
                 Container(
                   width: ((MediaQuery.of(context).size.width / 3)*2) - 40,
                   child: Column(
                     children: [
-                      FutureBuilder(future: GetWeatherTextService().getWeatherText('r', widget.day), builder: (BuildContext context, AsyncSnapshot<dynamic> weatherDataSnapshot)),
-                      Text(GetWeatherTextService().getWeatherText('r', widget.day)),
-                      Text(GetWeatherTextService().getWeatherText('w_s', widget.day)),
-                      Text(GetWeatherTextService().getWeatherText('t', widget.day))
+                      Text(variables[3]),
+                      Text(variables[5]),
+                      Text(variables[4]),
+                //     Text(GetWeatherTextService().getWeatherText('r', widget.day)),
                     ],
                   ),
                 )

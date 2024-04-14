@@ -4,40 +4,48 @@ import 'find_weather_from_data.dart';
 
 class GetWeatherTextService {
 
-  getWeatherText(String datatype,int day) async {
+  getWeatherText(int day) async {
     print("Starting...");
     int date = 8 + day;
+    print(date.toString());
     String text = "";
+
+    // Data is collected from the api and saved to a variable
     var data = await getWeatherData();
-    print("Data: "+data.toString());
-    if (datatype == 'l') {
-      List weatherForText = [
-        data[0][date],
-        data[1][date],
-        data[2][date]
-      ];
-      text = findWeather(weatherForText).toString();
-    } else if (datatype == 'q') {
-      String weatherForText = data[4][date].toString();
-      text = wwoToText(weatherForText).toString();
 
-    } else if(datatype == 't') {
-      text = 'Temperature: ${data[2][date].toString()}°C';
+    String l = "";
+    String q = "";
+    String r = "";
+    String t = "";
+    String w_s = "";
+    String i = "";
 
-    } else if (datatype == 'r') {
-      text = 'Rainfall per mm: ${data[1][date].toString()}';
 
-    } else if (datatype == 'w_s') {
-      text = 'Wind Speed km/h: ${data[3][date].toString()}';
+   //   List weatherForText = [
+   //     data[1][date],
+     //   data[2][date],
+     //   data[3][date]
+     // ];
+  //    print(weatherForText.toString());
+  //    l = findWeather(weatherForText);
+
+
+      String weatherForText2 = data[4][date].toString();
+      q = wwoToText(weatherForText2).toString();
+
+      t = 'Temperature: ${data[2][date].toString()}°C';
+
+      r = 'Rainfall per mm: ${data[1][date].toString()}';
+
+      w_s = 'Wind Speed km/h: ${data[3][date].toString()}';
       // [4][8]
 
-    } else if (datatype == 'i') {
-      text = "lib/assets/wwo_images/wwo_${data[4][date]}.png";
+      i = "lib/assets/wwo_images/wwo_${data[4][date]}.png";
 
-    } else {
-      text = "error try reloading if this is your app check the uses of GetWeatherDataType and what long_or_quick_l_or_q is defined as long_or_quick_l_or_q $datatype not found error code 1";
-    }
-    return text;
+    List variables = [i,l,q,r,t,w_s];
+
+
+    return variables;
 
   }
 
