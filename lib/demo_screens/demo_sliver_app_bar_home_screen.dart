@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            ListVerticalWidget(data_class: HomeStaticData()),
+            ListVerticalWidget(data_class: HomeStaticData(), screenContext: context,),
             const Padding(padding: EdgeInsets.all(17.0)),
             const Text(text_1, style: TextStyle(color: Colors.black)),
           ]),

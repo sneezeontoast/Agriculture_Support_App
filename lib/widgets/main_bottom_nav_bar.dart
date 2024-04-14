@@ -4,7 +4,8 @@
 import '../imports.dart';
 
 class BottomMainNavBar extends StatefulWidget {
-  const BottomMainNavBar({super.key});
+  var screenContext;
+  BottomMainNavBar({super.key, required this.screenContext});
 
   @override
   State<BottomMainNavBar> createState() => _BottomMainNavBarState();
@@ -15,15 +16,15 @@ class _BottomMainNavBarState extends State<BottomMainNavBar> {
 
   final pages = [
     const HomeScreen(),
-    ListVerticalWidget(data_class: HomeStaticData()),
-    const HomeScreen2(),
+    HowToScreen(),
+    Text("Tools"),
     // GetWeatherDataType(),
     // GetWeatherText(long_or_quick_l_or_q: 't', day: widget.weather[0]['day'],),
     // Text([0.2, 1.7, 2.9].toString()), // findWeather((100, 100, 100, 100))
     // Text('${getWeatherData().toString()} '),
     // Text("Add The weather forecast here we maybe should change the icon to the current weather"),
-    const WeatherScreen(),
-    const HowToScreen(),
+    WeatherScreen(),
+    Text("Info")
 
     // Text("information this might not be needed")
 

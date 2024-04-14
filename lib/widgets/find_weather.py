@@ -83,6 +83,7 @@ def find_nearest_value(value, data):
 	return data[nearest_value]
 
 
+
 def find_weather(weather_mesurement):
 	best_weathers = 0
 	top_weather = ('temperature ', weather_mesurement[2])

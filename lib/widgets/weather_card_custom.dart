@@ -1,10 +1,13 @@
+import 'package:agriculture_support_app/services/get_weather_text_service.dart';
+
 import '../imports.dart';
 
 class WeatherCardCustom extends StatefulWidget {
 
-  String image;
-  String title;
-  WeatherCardCustom({super.key, required this.image, required this.title});
+  int day;
+
+
+  WeatherCardCustom({super.key, required this.day});
 
   @override
   State<WeatherCardCustom> createState() => _WeatherCardCustomState();
@@ -20,25 +23,28 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
           minHeight: 20.0,
           
         ),
-        child: Column(
+        child: 
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(widget.title, style: Theme.of(context).textTheme.bodyLarge,),
+            Text(GetWeatherTextService().getWeatherText('q', widget.day), style: Theme.of(context).textTheme.bodyLarge,),
             Row(
               children: [
                 // holder for img
                 Container(
                   width: (MediaQuery.of(context).size.width / 3) - 40,
-                  child: Image.asset(widget.image,),
+                  child: Image.asset(GetWeatherTextService().getWeatherText('i', widget.day)),
                   
                 ),
-                // etxt detail section
+                // text detail section
                 Container(
                   width: ((MediaQuery.of(context).size.width / 3)*2) - 40,
                   child: Column(
                     children: [
-                      Text("details "),
-                      Text("Text ")
+                      FutureBuilder(future: GetWeatherTextService().getWeatherText('r', widget.day), builder: (BuildContext context, AsyncSnapshot<dynamic> weatherDataSnapshot)),
+                      Text(GetWeatherTextService().getWeatherText('r', widget.day)),
+                      Text(GetWeatherTextService().getWeatherText('w_s', widget.day)),
+                      Text(GetWeatherTextService().getWeatherText('t', widget.day))
                     ],
                   ),
                 )

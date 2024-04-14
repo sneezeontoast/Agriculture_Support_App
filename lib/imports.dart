@@ -30,7 +30,7 @@ export 'screens/simple_screen.dart';
 export 'screens/how_to_screen.dart';
 export 'screens/course_tutorial.dart';
 export 'screens/weather_screen.dart';
-export 'screens/home_screen_1.dart';
+// export 'screens/home_screen_1.dart';
 
 //----------------------------------------------------------------------
 //export video player

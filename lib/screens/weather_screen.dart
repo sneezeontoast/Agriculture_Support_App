@@ -1,3 +1,5 @@
+import 'package:agriculture_support_app/widgets/weather_card_custom.dart';
+
 import '../imports.dart';
 
 
@@ -39,10 +41,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
           Center(
             child: Column(
               children: [
-                WeatherCardCustom(image:"lib/assets/wwo_73.png",title: 'Snowy Weather',),
+                // WeatherCardCustom(image:"lib/assets/wwo_73.png",title: 'Snowy Weather',),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: WeatherCardCustom(image: 'lib/assets/wwo_77.png', title: 'freezing frost',),
+                  child: WeatherCardCustom(day: 0)
                 ),
                 // WeatherCard(max_height: 200, max_width: MediaQuery.of(context).size.width.round() - 16, day: 0),
                 // WeatherCard(max_height: 200, max_width: MediaQuery.of(context).size.width.round() - 16, day: 1),

@@ -49,7 +49,7 @@ List screenData_3 = [
 
 ];
 var customRoutes = <String, WidgetBuilder>{
-  '/': (context) => const BottomMainNavBar(),
+  '/': (context) =>  BottomMainNavBar(screenContext: context,),
   '/compost_intro': (context) => const CompostIntro(),
   '/demo_home': (context) => const DemoHomeScreen(),
   '/dummy_screen': (context) => DummyScreen(),

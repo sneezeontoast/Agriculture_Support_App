@@ -26,7 +26,7 @@ class HowToScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(child: ListVerticalWidget(data_class: HomeStaticData())),
+            Expanded(child: ListVerticalWidget(data_class: HomeStaticData(), screenContext: context,  )),
 
           ],
         ),
