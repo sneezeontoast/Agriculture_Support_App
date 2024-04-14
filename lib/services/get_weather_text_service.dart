@@ -4,6 +4,9 @@ import 'find_weather_from_data.dart';
 
 class GetWeatherTextService {
 
+
+  // This needs to now loop through seven days to create a list of a weeks worth of data.
+
   getWeatherText(int day) async {
     print("Starting...");
     int date = 8 + day;
