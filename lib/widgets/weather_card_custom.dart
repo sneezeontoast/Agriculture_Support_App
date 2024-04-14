@@ -41,7 +41,9 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
                   width: ((MediaQuery.of(context).size.width / 3)*2) - 40,
                   child: Column(
                     children: [
-                      FutureBuilder(future: GetWeatherTextService().getWeatherText('r', widget.day), builder: (BuildContext context, AsyncSnapshot<dynamic> weatherDataSnapshot)),
+                      FutureBuilder(future: GetWeatherTextService().getWeatherText('r', widget.day), builder: (BuildContext context, AsyncSnapshot<dynamic> weatherDataSnapshot) {
+                        return Text(weatherDataSnapshot.toString());
+                      }),
                       Text(GetWeatherTextService().getWeatherText('r', widget.day)),
                       Text(GetWeatherTextService().getWeatherText('w_s', widget.day)),
                       Text(GetWeatherTextService().getWeatherText('t', widget.day))
