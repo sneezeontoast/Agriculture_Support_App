@@ -21,6 +21,9 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
 
   setData() async {
     variables = await GetWeatherTextService().getWeatherText(widget.day);
+   print("-------------------------------------------------");
+    print(variables);
+    print("-------------------------------------------------");
     setState(() {
 
     });
@@ -55,26 +58,21 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
                 // holder for imgx
                 Container(
                   width: (MediaQuery.of(context).size.width / 3) - 40,
-                  child: variables[0] == ""?Icon(Icons.cloud):Image.asset(variables[0])),
+                  child: variables[0][widget.day] == ""?Icon(Icons.cloud):Image.asset(variables[0][widget.day])),
 
                 // text detail section
                 Container(
                   width: ((MediaQuery.of(context).size.width / 3)*2) - 40,
                   child: Column(
                     children: [
-<<<<<<< HEAD
-                      Text(variables[3]),
-                      Text(variables[5]),
-                      Text(variables[4]),
+
+                      Text(variables[3][widget.day]),
+                      Text(variables[5][widget.day]),
+                      Text(variables[4][widget.day]),
                 //     Text(GetWeatherTextService().getWeatherText('r', widget.day)),
-=======
-                      FutureBuilder(future: GetWeatherTextService().getWeatherText('r', widget.day), builder: (BuildContext context, AsyncSnapshot<dynamic> weatherDataSnapshot) {
-                        return Text(weatherDataSnapshot.toString());
-                      }),
-                      Text(GetWeatherTextService().getWeatherText('r', widget.day)),
-                      Text(GetWeatherTextService().getWeatherText('w_s', widget.day)),
-                      Text(GetWeatherTextService().getWeatherText('t', widget.day))
->>>>>>> 99ca5172f9420b4513d14519d58b4ad2b9d5d83a
+
+
+
                     ],
                   ),
                 )

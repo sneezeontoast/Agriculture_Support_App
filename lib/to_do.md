@@ -4,6 +4,7 @@
 2. you cant navigate a parent widget through a widget running in side another widget  (linked to 5)
 3. data base will update if requested so if bob queried it would update database for what it queried 
 4. sort out error with listview.builder not working in liist_vertical_widget.dart
+5. make costum weather work with all days
 
 # * Do Tools
 * Notes
