@@ -1,40 +1,20 @@
 import 'package:agriculture_support_app/services/get_weather_text_service.dart';
+import 'package:agriculture_support_app/demo_data/demo_weather_data_model.dart';
 
 import '../imports.dart';
 
 class WeatherCardCustom extends StatefulWidget {
 
-  int day;
+  WeatherDataItem weatherItem;
 
 
-  WeatherCardCustom({super.key, required this.day});
+  WeatherCardCustom({super.key, required this.weatherItem});
 
   @override
   State<WeatherCardCustom> createState() => _WeatherCardCustomState();
 }
 
 class _WeatherCardCustomState extends State<WeatherCardCustom> {
-
-//  List variables = [i,l,q,r,t,w_s];
- List variables = ["","","","","",""];
-
-
-  setData() async {
-    variables = await GetWeatherTextService().getWeatherText(widget.day);
-   print("-------------------------------------------------");
-    print(variables);
-    print("-------------------------------------------------");
-    setState(() {
-
-    });
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    setData();
-  }
 
 
 
@@ -52,8 +32,8 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(variables[2], style: Theme.of(context).textTheme.bodyLarge,),
-            Row(
+            Text(widget.weatherItem.temperature, style: Theme.of(context).textTheme.bodyLarge,),
+      /*      Row(
               children: [
                 // holder for imgx
                 Container(
@@ -71,17 +51,13 @@ class _WeatherCardCustomState extends State<WeatherCardCustom> {
                       Text(variables[4][widget.day]),
                 //     Text(GetWeatherTextService().getWeatherText('r', widget.day)),
 
-
+*/
 
                     ],
-                  ),
-                )
-              ],
-            )
-            
-          ],
-        ),
-      ),
+
+    )
+      )
+
     );
   }
 }
